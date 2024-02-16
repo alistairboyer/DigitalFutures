@@ -42,12 +42,12 @@ _Alistair Boyer_
     <li> There was some correlation between count of production companies and number of countries. <br /> 
       If production of a film spans several countries it makes sense to have additional separate production companies in each geographical region. </li>
     </ul>
-  <img src="Correlation_Heatmap.png" alt="Correlation of Features within the Dataset" width="40%"/>
+  <img src="Correlation_Heatmap.png" alt="Correlation of Features within the Dataset" width="80%"/>
   <li> Over time there seems to have been a general growth in film budget, <br />
      but adjusting for inflation suggests that the groth is not as great as it seems. </li>
   <li> The big budget film categories were Animation, Adventure, Fantasy, Family and Sciecne Fiction. <br />
      The most profitable films were did not necessarily receive the highest scores. </li>
-  <img src="Category_ProfitVote.png" alt="The Budget and Revenue; and Audience Score by the Top 10 Categories" width="40%"/>
+  <img src="Category_ProfitVote.png" alt="The Budget and Revenue; and Audience Score by the Top 10 Categories" width="80%"/>
   </ol>
 
 
@@ -79,7 +79,7 @@ _The Cinematic Fight Choreography of Yuen Woo-Ping_
 <li> The two films rank in the top 500 for profit and profit percentage out of all 4800+ movies in the database. <br /> 
 The Matrix is ranked even higher in public opinion (vote average) whereas Crouching Tiger, Hidden Dragon does not do as well. </li>
 
-<img src="Matrix_CrouchingTiger_ProfitVote.png" alt="The Matrix and Crouchng Tiger Hidden Dragon Highlights on a Plot of All Films Profit vs Audience Rating" width="40%"/>
+<img src="Matrix_CrouchingTiger_ProfitVote.png" alt="The Matrix and Crouchng Tiger Hidden Dragon Highlights on a Plot of All Films Profit vs Audience Rating" width="80%"/>
 
 <li> When looking at only the Action movies, both films are also ranked highly. The Matrix now breaking into the top 15 all time ranked Acton movies. </li>
 <li> For Crouching Tiger, Hidden Dragon, we can also consider how it ranked within non-english langage films. It is the third more profit-generating film of all time but falls down in the user vote. </li>
