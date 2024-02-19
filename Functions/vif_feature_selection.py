@@ -37,7 +37,7 @@ def vif_feature_selection(
 
     Raises:
         AssertionError:
-            If there is no 'const' in the
+            If there is no 'const' in the dataframe.
     """
 
     # need to have 'const' in the vif calculation because
