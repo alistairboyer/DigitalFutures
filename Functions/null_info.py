@@ -11,7 +11,7 @@ def null_info(
 ) -> Styler:
     """
     Generate a new styled dataframe containing information about
-    null and zero values in the supplied dataframe.
+    null, zero and unique values in the supplied dataframe.
 
     Args:
         dataframe (pandas.DataFrame):
@@ -33,6 +33,8 @@ def null_info(
                 'null_pc' = percentage of null values
                 'zero' = count of zero values
                 'zero_pc' = percentage of zero values
+                'n_unique' = number of unique values
+                'dtype' = series datatype
     """
 
     # create a new dataframe from columns names
@@ -50,6 +52,12 @@ def null_info(
     null_info_dataframe["zero_pc"] = (
         100 * null_info_dataframe["zeros"] / dataframe.shape[0]
     )
+
+    # get unique
+    null_info_dataframe["n_unique"] = dataframe.nunique()
+
+    # dtype
+    null_info_dataframe["dtype"] = dataframe.dtypes
 
     # sort by index
     null_info_dataframe.sort_index(inplace=True)

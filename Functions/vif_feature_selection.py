@@ -99,7 +99,9 @@ def _test_example() -> None:
     """Example using data from https://online.stat.psu.edu/stat501/lesson/12/12.4."""
     import pandas
 
-    print("""Example using data from https://online.stat.psu.edu/stat501/lesson/12/12.4.""")
+    print(
+        """Example using data from https://online.stat.psu.edu/stat501/lesson/12/12.4."""
+    )
     print()
 
     df = pandas.read_csv(
