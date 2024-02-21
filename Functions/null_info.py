@@ -41,6 +41,8 @@ def null_info(
     null_info_dataframe = pandas.DataFrame([], index=dataframe.columns)
     null_info_dataframe.index.name = "columns"  # default is Columns
 
+    #Series.count just does this
+    
     # get the nulls
     null_info_dataframe["nulls"] = dataframe.isnull().sum(axis=0)
     null_info_dataframe["null_pc"] = (
