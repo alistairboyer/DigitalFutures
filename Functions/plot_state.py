@@ -21,7 +21,7 @@ def _request_state_geometry(state_name: str) -> Tuple[str, List[Any]]:
     # data source URL
     URL = r"https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/us-state-boundaries/records?refine=name%3A%22{}%22"
 
-    # format the state name
+    # sanitise state_name
     state_name = state_name.title()
     state_name = urllib.parse.quote(state_name)
 
@@ -40,10 +40,10 @@ def _request_state_geometry(state_name: str) -> Tuple[str, List[Any]]:
         json_data["total_count"] == 1
     ), f"your search returned too many results: {state_name}"
 
-    # descend into results
+    # descend into results https://postgis.net/docs/ST_AsGeoJSON.html
     json_data = json_data["results"][0]
     name = json_data["name"]
-    coordinates = json_data["st_asgeojson"]["geometry"]["coordinates"]
+    coordinates = json_data["st_asgeojson"]["geometry"]["coordinates"] 
     return name, coordinates
 
 
@@ -51,7 +51,7 @@ def _get_state_geometry(state_name: str) -> List[Any]:
     """get state geometry info from the local cache or request from public.opendatasoft.com"""
     global _CACHE
 
-    # format the  name
+    # sanitise state_name
     state_name = state_name.title()
 
     # load if not in _CACHE
@@ -68,9 +68,11 @@ def plot_state(state_name: str, ax: Any, **kwargs: Any) -> None:
     plot a state outline on an object using data from
     https://public.opendatasoft.com/explore/dataset/us-state-boundaries/api/
 
+    if no color is specified then kwargs 'color' set to 'black'
+
     Args:
         state_name (str): full name of the state
-        ax (Any): an object with a .plot(xy, ys, **kwags) method.
+        ax (Any): an object with a .plot(xy, ys, **kwargs) method
         **kwargs (Any): passed to ax.plot()
     Returns:
         None
@@ -92,7 +94,7 @@ def demo() -> None:
         matplotlib.use("TkAgg")
 
     for state in ["cAlifOrnia", "Hawaii"]:
-        plot_state(state, plt)
+        plot_state(state, plt, color=None)
         plt.title(state.title())
         plt.show()
 
