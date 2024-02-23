@@ -48,7 +48,7 @@ def _request_state_geometry(state_name: str) -> Tuple[str, List[Any]]:
 
 
 def _get_state_geometry(state_name: str) -> List[Any]:
-    """get state geometry info from the local cache or _request from public.opendatasoft.com"""
+    """get state geometry info from the local cache or request from public.opendatasoft.com"""
     global _CACHE
 
     # format the  name
@@ -65,12 +65,12 @@ def _get_state_geometry(state_name: str) -> List[Any]:
 
 def plot_state(state_name: str, ax: Any, **kwargs: Any) -> None:
     """
-    plot a state outline on an object.
+    plot a state outline on an object using data from
     https://public.opendatasoft.com/explore/dataset/us-state-boundaries/api/
 
     Args:
-        state_name: (str) full name of the state
-        ax: (Any) an object with a .plot(xy, ys, **kwags) method.
+        state_name (str): full name of the state
+        ax (Any): an object with a .plot(xy, ys, **kwags) method.
         **kwargs (Any): passed to ax.plot()
     Returns:
         None
