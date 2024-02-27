@@ -43,7 +43,7 @@ def _request_state_geometry(state_name: str) -> Tuple[str, List[Any]]:
     # descend into results https://postgis.net/docs/ST_AsGeoJSON.html
     json_data = json_data["results"][0]
     name = json_data["name"]
-    coordinates = json_data["st_asgeojson"]["geometry"]["coordinates"] 
+    coordinates = json_data["st_asgeojson"]["geometry"]["coordinates"]
     return name, coordinates
 
 
