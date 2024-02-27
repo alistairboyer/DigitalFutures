@@ -15,3 +15,16 @@ def metrics_series(y_true: Any, y_pred: Any, **series_kwargs: Any) -> Any:
         dtype=series_kwargs.pop("dtype", float),
         **series_kwargs,
     )
+
+
+def _test_example() -> None:
+    print(
+        metrics_series(
+            [1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1],
+            [1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1],
+        )
+    )
+
+
+if __name__ == "__main__":
+    _test_example()
