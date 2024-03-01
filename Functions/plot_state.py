@@ -63,7 +63,7 @@ def _get_state_geometry(state_name: str) -> List[Any]:
     return _CACHE[state_name]
 
 
-def plot_state(state_name: str, ax: Any, **kwargs: Any) -> None:
+def plot_state(state_name: str, ax: Any, transform=None, **kwargs: Any) -> None:
     """
     plot a state outline on an object using data from
     https://public.opendatasoft.com/explore/dataset/us-state-boundaries/api/
@@ -83,6 +83,8 @@ def plot_state(state_name: str, ax: Any, **kwargs: Any) -> None:
     # geometry is split into smaller sections containing e.g. island info
     for section in _get_state_geometry(state_name):
         section = numpy.squeeze(section)
+        if transform is not None:
+            section = transform(section)
         ax.plot(section[:, 0], section[:, 1], **kwargs)
 
 
