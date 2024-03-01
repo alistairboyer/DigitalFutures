@@ -334,7 +334,7 @@ Equality and Equity
 - __Equity__: everyone gets resources to reach an equal outcome
 
 Equity vs Equality [https://interactioninstitute.org/illustrating-equality-vs-equity/] <br />
-<img src="https://interactioninstitute.org/wp-content/uploads/2016/01/IISC_EqualityEquity.png" alt="Equity vs Equality" width="200px" /> <br />
+<img src="https://interactioninstitute.org/wp-content/uploads/2016/01/IISC_EqualityEquity.png" alt="Equity vs Equality" width="300px" /> <br />
 
 
 Justice
@@ -419,3 +419,8 @@ __Anatomy of an AI System__, Digital Poster, Kate Crawford, Vladan Joler
 > __Artistotle__
 >
 > _Choice, not chance, determines your destiny_
+
+
+
+![Certificate of Completion](Ethics_of_AI_Certificate.png)
+
