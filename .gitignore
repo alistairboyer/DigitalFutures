@@ -1,5 +1,5 @@
 # custom ignores
-_*.py
+_*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
