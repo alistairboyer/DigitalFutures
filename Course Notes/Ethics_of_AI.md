@@ -334,7 +334,7 @@ Equality and Equity
 - __Equity__: everyone gets resources to reach an equal outcome
 
 Equity vs Equality [https://interactioninstitute.org/illustrating-equality-vs-equity/]
-![Equity vs Equality [https://interactioninstitute.org/illustrating-equality-vs-equity/]](https://interactioninstitute.org/wp-content/uploads/2016/01/IISC_EqualityEquity.png)
+![Equity vs Equality [https://interactioninstitute.org/illustrating-equality-vs-equity/]](https://interactioninstitute.org/wp-content/uploads/2016/01/IISC_EqualityEquity.png){width=200}
 
 
 Justice
