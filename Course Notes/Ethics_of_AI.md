@@ -333,8 +333,8 @@ Equality and Equity
 - __Equality__: everyone is gets the same resources and opporinunities
 - __Equity__: everyone gets resources to reach an equal outcome
 
-Equity vs Equality [https://interactioninstitute.org/illustrating-equality-vs-equity/]
-<img src="https://interactioninstitute.org/wp-content/uploads/2016/01/IISC_EqualityEquity.png" alt="Equity vs Equality" width="200px" />
+Equity vs Equality [https://interactioninstitute.org/illustrating-equality-vs-equity/] <br />
+<img src="https://interactioninstitute.org/wp-content/uploads/2016/01/IISC_EqualityEquity.png" alt="Equity vs Equality" width="200px" /> <br />
 
 
 Justice
