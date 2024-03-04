@@ -574,7 +574,7 @@ Series.apply(
 )
 ```
 
-map an replace
+map and replace
   -  convert values in Series according to supplied dict (or function)
 
 ```python
