@@ -104,9 +104,6 @@ def plot_state(state_name, ax, transform=None, force_download=False, **kwargs) -
 
 example:
 ```python
-import matplotlib
-import matplotlib.pyplot as plt
-
 fig, ax = plt.subplots(1, 2)
 for n, state in enumerate(["cAlifOrnia", "Hawaii"]):
     # plot state! Set color=None to override default color=black and get multicolor outlines
