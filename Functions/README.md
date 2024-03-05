@@ -1,4 +1,4 @@
-# Selection of Useful Python Functions
+# Miscellaneous Python Functions
 _Alistair Boyer_
 
 Miscellaneous tools and personal implementations of key concepts in data science
