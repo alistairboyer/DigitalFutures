@@ -44,10 +44,13 @@ def crosstabplot(
         .to_frame(count_label)
         .reset_index()
     )
-    
+
     # initialise palette
     if ypalette is None:
-        ypalette = {k: v for k, v in zip(sorted(value_counts[y].unique()), seaborn.color_palette())}
+        ypalette = {
+            k: v
+            for k, v in zip(sorted(value_counts[y].unique()), seaborn.color_palette())
+        }
 
     # insert dummy column for single axis display
     if x == y:
@@ -73,7 +76,7 @@ def crosstabplot(
         # calculate vertical data
         heights = group[count_label] / group[count_label].sum()
         bottoms = numpy.pad(heights, (1, 0), constant_values=(0,))[:-1].cumsum()
-        
+
         # reset color cycle back to 0
         ax.set_prop_cycle(None)
 
@@ -103,9 +106,6 @@ def crosstabplot(
         xlim=(0.0, 1.0),
         ylim=(0.0, 1.0),
     )
-    
-
-
 
 
 def example() -> None:
@@ -119,11 +119,11 @@ def example() -> None:
     df = seaborn.load_dataset("penguins")
 
     palette = {
-        name: seaborn.color_palette()[n] for 
-        n, name in enumerate(df["species"].unique())
+        name: seaborn.color_palette()[n]
+        for n, name in enumerate(df["species"].unique())
     }
 
-    fig, axs = plt.subplots(4, 1, sharey=True, figsize=(4,12))
+    fig, axs = plt.subplots(4, 1, sharey=True, figsize=(4, 12))
 
     crosstabplot(axs[0], df, "species", "species", ypalette=palette)
     axs[0].set_xticks([])
@@ -139,7 +139,9 @@ def example() -> None:
     axs[2].set_xlabel("sex [dropna=True]")
     axs[2].set_ylabel("species")
 
-    crosstabplot(axs[3], df, "sex", "species", dropna=True, fill_width=True, ypalette=palette)
+    crosstabplot(
+        axs[3], df, "sex", "species", dropna=True, fill_width=True, ypalette=palette
+    )
     axs[3].set_xlabel("sex [dropna=True, fill_width=True]")
     axs[3].set_ylabel("species")
 
@@ -150,5 +152,3 @@ def example() -> None:
 
 if __name__ == "__main__":
     example()
-
-
