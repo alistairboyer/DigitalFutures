@@ -2,7 +2,7 @@ import numpy
 import seaborn
 import matplotlib.pyplot
 
-from typing import Callable, Union, Optional, Any
+from typing import Callable, Optional, Any
 from pandas.core.frame import DataFrame
 from matplotlib.axes import Axes
 
@@ -10,8 +10,8 @@ from matplotlib.axes import Axes
 def crosstabplot(
     ax: Axes,
     df: DataFrame,
-    x_label: Union[str, int],
-    y_label: Union[str, int],
+    x_label: str,
+    y_label: str,
     *,
     y_palette: Optional[dict[str, Any]] = None,
     dropna: bool = False,
@@ -26,8 +26,8 @@ def crosstabplot(
     Args:
         ax (matplotlib.axis): axis.
         df (pandas.DataFrame): dataframe.
-        x_label (str | int): Label of x series. Set equal to y for a vertical 1-D plot.
-        y_label (str | int): Label of y series. Set equal to x for a vertical 1-D plot.
+        x_label (str): Label of x series. Set equal to y for a vertical 1-D plot.
+        y_label (str): Label of y series. Set equal to x for a vertical 1-D plot.
         y_palette (dict, optional): Dict of {value: color} for the vertical axis. Defaults to None when the palette is automatically generated from the unique values of the data.
         dropna (bool, optional): Drop nan values. Defaults to False.
         fill_width (bool, optional): Fill nans to full width when True or leave space to represent nans when False. Defaults to False.
