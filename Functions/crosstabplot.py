@@ -2,19 +2,23 @@ import numpy
 import seaborn
 import matplotlib.pyplot
 
+from typing import Callable, Union, Optional, Any
+from pandas.core.frame import DataFrame
+from matplotlib.axes import Axes
+
 
 def crosstabplot(
-    ax,
-    df,
-    x,
-    y,
+    ax: Axes,
+    df: DataFrame,
+    x_label: Union[str, int],
+    y_label: Union[str, int],
     *,
-    ypalette=None,
-    dropna=False,
-    fill_width=False,
-    sorter=None,
-    vsep=True,
-    **barplotkwargs,
+    y_palette: Optional[dict[str, Any]] = None,
+    dropna: bool = False,
+    fill_width: bool = False,
+    sorter: Optional[Callable[[DataFrame], DataFrame]] = None,
+    vsep: bool = True,
+    **barplotkwargs: Any,
 ) -> None:
     """
     Draw a treemap-type crosstab area plot of two (or one) features within a dataframe on an axis.
@@ -22,9 +26,9 @@ def crosstabplot(
     Args:
         ax (matplotlib.axis): axis.
         df (pandas.DataFrame): dataframe.
-        x (str | int): Label of x series. Set equal to y for a 1-D plot.
-        y (str | int): Label of y series. Set equal to x for a 1-D plot.
-        ypalette (dict, optional): Dict of value: color for the vertical axis. Defaults to auto.
+        x_label (str | int): Label of x series. Set equal to y for a vertical 1-D plot.
+        y_label (str | int): Label of y series. Set equal to x for a vertical 1-D plot.
+        y_palette (dict, optional): Dict of {value: color} for the vertical axis. Defaults to None when the palette is automatically generated from the unique values of the data.
         dropna (bool, optional): Drop nan values. Defaults to False.
         fill_width (bool, optional): Fill nans to full width when True or leave space to represent nans when False. Defaults to False.
         sorter (_type_, optional): Sorter for sorting value counts. Defaults to None when descending count is used.
@@ -33,9 +37,9 @@ def crosstabplot(
     """
 
     # initialise variables for labels
-    column_labels = [x] if x == y else [x, y]
-    count_label = f"{x}_{y}_count"
-    x_label = f"{x}_copy" if x == y else x
+    column_labels = [x_label] if x_label == y_label else [x_label, y_label]
+    count_label = f"{x_label}_{y_label}_count"
+    x_label = f"{x_label}_copy" if x_label == y_label else x_label
 
     # calculate count crosstab
     value_counts = (
@@ -46,21 +50,23 @@ def crosstabplot(
     )
 
     # initialise palette
-    if ypalette is None:
-        ypalette = {
+    if y_palette is None:
+        y_palette = {
             k: v
-            for k, v in zip(sorted(value_counts[y].unique()), seaborn.color_palette())
+            for k, v in zip(
+                sorted(value_counts[y_label].unique()), seaborn.color_palette()
+            )
         }
 
     # insert dummy column for single axis display
-    if x == y:
+    if value_counts.shape[1] == 2:
         value_counts.insert(loc=1, column=x_label, value="")
 
     # sort
     if sorter is not None:
         value_counts = sorter(value_counts)
     else:
-        value_counts = value_counts.sort_values([x_label, y], ascending=False)
+        value_counts = value_counts.sort_values([x_label, y_label], ascending=False)
 
     # get groups
     groups = value_counts.groupby(x_label, dropna=False, sort=False)
@@ -81,7 +87,7 @@ def crosstabplot(
         ax.set_prop_cycle(None)
 
         # iterate vertically
-        for y_value, height, bottom in zip(group[y], heights, bottoms):
+        for y_value, height, bottom in zip(group[y_label], heights, bottoms):
 
             # do the plot!
             seaborn.barplot(
@@ -90,7 +96,7 @@ def crosstabplot(
                 width=[width],
                 bottom=[bottom],
                 native_scale=True,
-                color=ypalette.get(y_value) if ypalette is not None else None,
+                color=y_palette.get(y_value) if y_palette is not None else None,
                 ax=ax,
                 **barplotkwargs,
             )
@@ -110,41 +116,47 @@ def crosstabplot(
 
 def example() -> None:
     plt = seaborn.mpl.pyplot
-    seaborn.set_theme()
-    seaborn.set_context("paper")
 
     if "get_ipython" not in locals():
         seaborn.mpl.use("TkAgg")
 
+    # get example data
     df = seaborn.load_dataset("penguins")
 
+    # generate palette
     palette = {
         name: seaborn.color_palette()[n]
         for n, name in enumerate(df["species"].unique())
     }
 
+    # set up axes
     fig, axs = plt.subplots(4, 1, sharey=True, figsize=(4, 12))
 
-    crosstabplot(axs[0], df, "species", "species", ypalette=palette)
+    # do crosstab - 1D "sex" (same label for x and y)
+    crosstabplot(axs[0], df, "species", "species", y_palette=palette)
     axs[0].set_xticks([])
     axs[0].set_ylabel("species")
     handles = [plt.Rectangle((0, 0), 1, 1, color=color) for color in palette.values()]
     axs[0].legend(handles, palette.keys())
 
-    crosstabplot(axs[1], df, "sex", "species", ypalette=palette)
+    # do crosstab - "sex" vs "species"
+    crosstabplot(axs[1], df, "sex", "species", y_palette=palette)
     axs[1].set_xlabel("sex [dropna=False]")
     axs[1].set_ylabel("species")
 
-    crosstabplot(axs[2], df, "sex", "species", dropna=True, ypalette=palette)
+    # do crosstab - "sex" vs "species", demonstrate dropna
+    crosstabplot(axs[2], df, "sex", "species", dropna=True, y_palette=palette)
     axs[2].set_xlabel("sex [dropna=True]")
     axs[2].set_ylabel("species")
 
+    # do crosstab - "sex" vs "species", demonstrate fill_width
     crosstabplot(
-        axs[3], df, "sex", "species", dropna=True, fill_width=True, ypalette=palette
+        axs[3], df, "sex", "species", dropna=True, fill_width=True, y_palette=palette
     )
     axs[3].set_xlabel("sex [dropna=True, fill_width=True]")
     axs[3].set_ylabel("species")
 
+    # overall title and layout
     fig.suptitle("Penguin Species Distribution by Sex", fontweight="bold")
     fig.tight_layout()
     plt.show()
