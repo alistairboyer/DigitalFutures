@@ -3,7 +3,8 @@ import json
 import requests
 import urllib.parse
 
-from typing import List, Tuple, Any
+from typing import List, Tuple, Callable, Optional, Any
+from numpy.typing import NDArray
 
 
 # data from https://public.opendatasoft.com/explore/dataset/us-state-boundaries
@@ -47,7 +48,7 @@ def _request_state_geometry(state_name: str) -> Tuple[str, List[Any]]:
     return name, coordinates
 
 
-def _get_state_geometry(state_name: str) -> List[Any]:
+def _get_state_geometry(state_name: str, force_download: bool = False) -> List[Any]:
     """get state geometry info from the local cache or request from public.opendatasoft.com"""
     global _CACHE
 
@@ -55,7 +56,7 @@ def _get_state_geometry(state_name: str) -> List[Any]:
     state_name = state_name.title()
 
     # load if not in _CACHE
-    if state_name not in _CACHE:
+    if state_name not in _CACHE or force_download:
         state_name, coordinates = _request_state_geometry(state_name=state_name)
         # save in cache
         _CACHE[state_name] = coordinates
@@ -63,43 +64,69 @@ def _get_state_geometry(state_name: str) -> List[Any]:
     return _CACHE[state_name]
 
 
-def plot_state(state_name: str, ax: Any, transform=None, **kwargs: Any) -> None:
+def plot_state(
+    state_name: str,
+    ax: Any,
+    transform: Optional[Callable[[NDArray], NDArray]]=None,
+    force_download: bool = False,
+    **kwargs: Any,
+) -> None:
     """
-    plot a state outline on an object using data from
-    https://public.opendatasoft.com/explore/dataset/us-state-boundaries/api/
+    plot a state outline on an object with an appropriate `.plot()` method  using data from
+    https://public.opendatasoft.com/explore/dataset/us-state-boundaries/
 
     if no color is specified then kwargs 'color' set to 'black'
 
     Args:
-        state_name (str): full name of the state
-        ax (Any): an object with a .plot(xy, ys, **kwargs) method
-        **kwargs (Any): passed to ax.plot()
-    Returns:
-        None
+        state_name (str): full name of the state.
+        transform (None | Callable[[numpy.Array], numpy.Array]):
+            apply a transform to the coordinates before plotting.
+            The Callable argument should transform a numpy.arrray of shape (n, 2)
+                holding multiple [longitude, latitude] datapoints into another (n, 2) array.
+            Defaults to None for no transform.
+        force_download (bool):
+            when True will attempt to recover geometry from the local cache before downloading
+            otherwise will download outline data every time. Defaults to False.
+        ax (Any): an object with a .plot(xy, ys, **kwargs) method.
+        **kwargs (Any): passed to ax.plot().
     """
+
     # black is the default color
     kwargs["color"] = kwargs.pop("color", "black")
 
     # geometry is split into smaller sections containing e.g. island info
-    for section in _get_state_geometry(state_name):
+    for section in _get_state_geometry(state_name, force_download=force_download):
+        # remove single datapoint dimension
         section = numpy.squeeze(section)
+        # perform transform
         if transform is not None:
             section = transform(section)
+        # plot!
         ax.plot(section[:, 0], section[:, 1], **kwargs)
 
 
-def demo() -> None:
+def example() -> None:
     import matplotlib
     import matplotlib.pyplot as plt
 
     if "get_ipython" not in locals():
         matplotlib.use("TkAgg")
 
-    for state in ["cAlifOrnia", "Hawaii"]:
-        plot_state(state, plt, color=None)
-        plt.title(state.title())
-        plt.show()
+    fig, ax = plt.subplots(1, 2)
+    for n, state in enumerate(["cAlifOrnia", "Hawaii"]):
+        # plot state! Set color=None to override default color=black and get multicolor outlines
+        plot_state(state, ax[n], color=None)
+        # title
+        ax[n].set_title(state.title())
+        # hide border
+        ax[n].axis("off")
+        # equal aspect ratio
+        ax[n].set(aspect="equal")
+        # set same scale for y axis to maintain scale N.B. aspect='equal'
+        ax[n].set_ylim(ax[n].get_ylim()[0], ax[n].get_ylim()[0] + 11)
+
+    plt.show()
 
 
 if __name__ == "__main__":
-    demo()
+    example()
