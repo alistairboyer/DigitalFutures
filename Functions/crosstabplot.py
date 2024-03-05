@@ -3,7 +3,7 @@ import seaborn
 import matplotlib.pyplot
 
 
-def treemap(
+def crosstabplot(
     ax,
     df,
     x,
@@ -17,7 +17,7 @@ def treemap(
     **barplotkwargs,
 ) -> None:
     """
-    Draw a treemap area plot of two (or one) features within a dataframe on an axis.
+    Draw a treemap-type crosstab area plot of two (or one) features within a dataframe on an axis.
 
     Args:
         ax (matplotlib.axis): axis.
@@ -125,22 +125,22 @@ def example() -> None:
 
     fig, axs = plt.subplots(4, 1, sharey=True, figsize=(4,12))
 
-    treemap(axs[0], df, "species", "species", ypalette=palette)
+    crosstabplot(axs[0], df, "species", "species", ypalette=palette)
     axs[0].set_xticks([])
     axs[0].set_ylabel("species")
     handles = [plt.Rectangle((0, 0), 1, 1, color=color) for color in palette.values()]
     axs[0].legend(handles, palette.keys())
 
-    treemap(axs[1], df, "sex", "species", ypalette=palette)
-    axs[1].set_xlabel("sex - dropna=False")
+    crosstabplot(axs[1], df, "sex", "species", ypalette=palette)
+    axs[1].set_xlabel("sex [dropna=False]")
     axs[1].set_ylabel("species")
 
-    treemap(axs[2], df, "sex", "species", dropna=True, ypalette=palette)
-    axs[2].set_xlabel("sex - dropna=True")
+    crosstabplot(axs[2], df, "sex", "species", dropna=True, ypalette=palette)
+    axs[2].set_xlabel("sex [dropna=True]")
     axs[2].set_ylabel("species")
 
-    treemap(axs[3], df, "sex", "species", dropna=True, fill_width=True, ypalette=palette)
-    axs[3].set_xlabel("sex - dropna=True, fill_width=True")
+    crosstabplot(axs[3], df, "sex", "species", dropna=True, fill_width=True, ypalette=palette)
+    axs[3].set_xlabel("sex [dropna=True, fill_width=True]")
     axs[3].set_ylabel("species")
 
     fig.suptitle("Penguin Species Distribution by Sex", fontweight="bold")
