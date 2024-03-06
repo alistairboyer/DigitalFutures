@@ -5,6 +5,7 @@ _Alistair Boyer_
 Miscellaneous tools and personal implementations of key concepts in data science
 - [`crosstabplot()`](#crosstab-plot): plot cross tabulated data with in a dataframe in a treemap-type diagram.
 - [`plotstate()`](#plot-state): plot a US state on an object.
+- [`nwise()`](#n-wise): collect tuples of n items from a sequence. [see `itertools.batched()`]
 
 
 ## Crosstab Plot
@@ -125,3 +126,48 @@ for n, state in enumerate(["cAlifOrnia", "Hawaii"]):
 plt.show()
 ```
 <img src="plot_state.png" alt="Plot of California and Hawaii using the plot_state() function."/>
+
+
+
+## N-Wise
+- collect elements from a sequence in n-wise chunks
+- see also `itertools.batched()`
+
+```python
+def nwise(
+    sequence: Sequence[Any], n: int = 3, exhaust: Optional[bool] = None
+) -> Generator[Tuple[Any, ...], None, None]:
+    """
+    yield tuple of n values from a sequence
+    see also: `itertools.batched()`
+
+    Paramaters:
+        sequence (Sequence[Any]):
+            sequence from which to take elements in n-wise groups
+        n (int):
+            size of group to take
+        exhaust (bool, optional):
+            When True: pads out the return values with None for the last set.
+            When False: truncates leftover data that can't fill n values.
+            When None: raises exception if data does not fit shape of n.
+            Defaults to None.
+    Yields:
+        Tuple[Any, ...]
+    """
+
+```
+
+examples
+
+```python
+>>> list(nwise(range(6), 3))
+[(0, 1, 2), (3, 4, 5)]
+>>> list(nwise(range(6), 2))
+[(0, 1), (2, 3), (4, 5)]
+>>> list(nwise(range(5), 3, True))
+[(0, 1, 2), (3, 4, None)]
+>>> list(nwise(range(5), 3, False))
+[(0, 1, 2)]
+>>> list(nwise(range(5), 3, None))
+ValueError
+```
