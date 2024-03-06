@@ -1,9 +1,11 @@
 # Miscellaneous Python Functions
 _Alistair Boyer_
 
+
 Miscellaneous tools and personal implementations of key concepts in data science
-- [Crosstab Plot](#crosstab-plot): plot cross tabulated data with in a dataframe in a treemap-type diagram.
-- [Plot State](#plot-state): plot a US state on an object.
+- [`crosstabplot()`](#crosstab-plot): plot cross tabulated data with in a dataframe in a treemap-type diagram.
+- [`plotstate()`](#plot-state): plot a US state on an object.
+
 
 ## Crosstab Plot
 - add the outline of a state to any object with an appropriate `.plot()` method
@@ -73,6 +75,9 @@ plt.show()
 
 ```
 <img src="crosstabplot.png" alt="Crosstab Plot using data from the seaborn penguins dataset."/>
+
+
+
 
 ## Plot State
 - add the outline of a state to any object with an appropriate `.plot()` method

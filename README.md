@@ -2,7 +2,10 @@
 _Alistair Boyer_
 
 # Miscellaneous Functions
-- Miscellaneous functions for data science and plotting data.
+<a href="/Functions/">Functions</a>
+- `crosstabplot()`: plot cross tabulated data with in a dataframe in a treemap-type diagram.
+- `plotstate()`: plot a US state on an object.
+
 
 
 
