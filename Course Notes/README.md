@@ -2,6 +2,12 @@
 _Alistair Boyer_
 
 
+## Pandas
+- Cheat sheet with the most useful pandas methods 
+<a href="Pandas.md">Pandas</a>
+
+
+
 ## Ethics of AI!
 <a href="Ethics_of_AI.md">Ethics of AI!</a>
 
