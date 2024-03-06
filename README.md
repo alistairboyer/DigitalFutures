@@ -10,7 +10,7 @@ _Alistair Boyer_
 
 ## Pandas
 <a href="/Course Notes/Pandas.md">Pandas</a>
-- Cheat-sheer for __pandas__ methods
+- Cheat-sheet for the most useful __pandas__ methods
 
 
 ## Ethics of AI!

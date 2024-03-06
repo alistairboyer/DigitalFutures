@@ -3,8 +3,8 @@ _Alistair Boyer_
 
 
 ## Pandas
-- Cheat sheet with the most useful pandas methods 
 <a href="Pandas.md">Pandas</a>
+- Cheat-sheet for the most useful __pandas__ methods
 
 
 
