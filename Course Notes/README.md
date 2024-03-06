@@ -12,3 +12,13 @@ _Alistair Boyer_
 1. __Human Rights__
 1. __Fairness__ Should AI be Fair and Non-discriminative?
 1. __AI Ethics in Practice__ How might AI Ethics Develop?
+
+
+## IBM Agile
+<a href="IBM_Agile.md">IBM Agile</a>
+
+1. Agile
+1. Agile Practices
+1. Agile Teams
+1. Agile Operations
+1. Agile Programs
