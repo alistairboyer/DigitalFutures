@@ -4,7 +4,6 @@ _Alistair Boyer_
 ### books.toscrape.com
 - Scraping from https://books.toscrape.com
 - Collect all book information into a pandas.DataFrame, clean and display selected charts.
-- https://colab.research.google.com/drive/11jdTmieKJ5WF9SOrkBeagmmuiMFyEWjJ
 - <a href="BooksToScrape.ipynb">BooksToScrape.ipynb</a>
 
 ### Murder Mystery Challenge
