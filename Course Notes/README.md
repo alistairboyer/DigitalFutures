@@ -3,14 +3,12 @@ _Alistair Boyer_
 
 
 ## Pandas
-<a href="Pandas.md">Pandas</a>
+- <a href="Pandas.md">Pandas</a>
 - Cheat-sheet for the most useful __pandas__ methods
 
 
-
 ## Ethics of AI!
-<a href="Ethics_of_AI.md">Ethics of AI!</a>
-
+- <a href="Ethics_of_AI.md">Ethics of AI!</a>
 1. __Introduction__ What is AI Ethics?
 1. __Non-maleficence__ What Whould We Do?
 1. __Accountability__ Who Should be Blamed?
@@ -21,10 +19,13 @@ _Alistair Boyer_
 
 
 ## IBM Agile
-<a href="IBM_Agile.md">IBM Agile</a>
-
+- <a href="IBM_Agile.md">IBM Agile</a>
 1. Agile
 1. Agile Practices
 1. Agile Teams
 1. Agile Operations
 1. Agile Programs
+
+
+## Java Explorer
+- <a href="Java_Explorer.md">Java Explorer</a>

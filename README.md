@@ -35,6 +35,10 @@ _Alistair Boyer_
 1. Agile Programs
 
 
+## Java Explorer
+- <a href="/Course Notes/Java_Explorer.md">Java Explorer</a>
+
+
 # Exercises
 - <a href="/Exercises/">Selected exercises from the DigitalFutures course</a>
 1. Scraping books.toscrape.com
