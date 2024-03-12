@@ -4,12 +4,7 @@ import random
 import time
 import datetime
 import requests
-
-plt = False
-try:
-    import matplotlib.pyplot as plt
-except ModuleNotFoundError:
-    pass
+import matplotlib.pyplot as plt
 
 
 # load question set
