@@ -79,7 +79,7 @@ if "n_answered" not in st.session_state:
 with columns[0]:
     st.title('🐼 Pandas Methods Quiz 🐼')
     new_question()
-    st.write(":grey[Anonymous usage satistics may be collected.]", align='right')
+    st.write(":grey[Anonymous usage satistics may be collected.]")
 
 with columns[-1]:
     if plt and st.session_state['n_answered'] > 0:
