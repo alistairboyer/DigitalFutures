@@ -108,4 +108,4 @@ with columns[-1]:
 
 
 
-st.write("Anonymous usage data may be collected and stored.")
+st.write(":grey[Anonymous usage satistics may be collected.]", align='right')
