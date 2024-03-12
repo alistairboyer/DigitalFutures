@@ -26,6 +26,8 @@ _Alistair Boyer_
 1. Agile Operations
 1. Agile Programs
 
+## Google Learning Paths
+- <a href="Google_Generative_AI.md">Introduction to Generative AI and Responsible AI</a>
 
 ## Java Explorer
 - <a href="Java_Explorer.md">Java Explorer</a>
