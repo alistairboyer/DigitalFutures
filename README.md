@@ -36,7 +36,7 @@ _Alistair Boyer_
 
 
 ## Google Learning Paths
-- <a href="Google_Generative_AI.md">Introduction to Generative AI and Responsible AI</a>
+- <a href="/Course Notes/Google_Generative_AI.md">Introduction to Generative AI and Responsible AI</a>
 
 
 ## Java Explorer
