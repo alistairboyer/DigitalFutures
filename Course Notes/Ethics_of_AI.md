@@ -421,6 +421,6 @@ __Anatomy of an AI System__, Digital Poster, Kate Crawford, Vladan Joler
 > _Choice, not chance, determines your destiny_
 
 
+<img src="images/Ethics_of_AI_Certificate.png" alt="Certificate of Completion" />
 
-![Certificate of Completion](Ethics_of_AI_Certificate.png)
 

@@ -393,5 +393,5 @@ throw new Exception("Exception information");
   - Read-Evauate-Print-Loop [REPL] command line tool
 
 # Java Explorer Badge
-<img src="JavaExplorer.jpeg" alt="Java Explorer Badge" />
+<img src="images/JavaExplorer.jpeg" alt="Java Explorer Badge" />
 
