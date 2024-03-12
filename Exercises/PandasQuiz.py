@@ -4,7 +4,13 @@ import random
 import time
 import datetime
 import requests
-import matplotlib.pyplot as plt
+
+plt = False
+try:
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError:
+    pass
+
 
 # load question set
 df = pd.read_csv("PandasMethods.csv", index_col=0)
@@ -80,7 +86,7 @@ with columns[0]:
     new_question()
 
 with columns[-1]:
-    if st.session_state['n_answered'] > 0:
+    if plt and st.session_state['n_answered'] > 0:
         fig, ax = plt.subplots()
         ax.pie(
             [
@@ -99,3 +105,7 @@ with columns[-1]:
         ax.set_facecolor('#00000000')
         fig.set_facecolor('#00000000')
         st.pyplot(fig=fig, clear_figure=None, use_container_width=True)
+
+
+
+st.write("Anonymous usage data may be collected and stored.")
