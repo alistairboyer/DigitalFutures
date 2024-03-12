@@ -1,0 +1,452 @@
+,category,section,method,method_url,question
+0,General functions,Data manipulations,pandas.melt,api/pandas.melt.html#pandas.melt,"Unpivot a DataFrame from wide to long format, optionally leaving identifiers set."
+1,General functions,Data manipulations,pandas.pivot,api/pandas.pivot.html#pandas.pivot,Return reshaped DataFrame organized by given index / column values.
+2,General functions,Data manipulations,pandas.pivot_table,api/pandas.pivot_table.html#pandas.pivot_table,Create a spreadsheet-style pivot table as a DataFrame.
+3,General functions,Data manipulations,pandas.crosstab,api/pandas.crosstab.html#pandas.crosstab,Compute a simple cross tabulation of two (or more) factors.
+4,General functions,Data manipulations,pandas.cut,api/pandas.cut.html#pandas.cut,Bin values into discrete intervals.
+5,General functions,Data manipulations,pandas.qcut,api/pandas.qcut.html#pandas.qcut,Quantile-based discretization function.
+6,General functions,Data manipulations,pandas.merge,api/pandas.merge.html#pandas.merge,Merge DataFrame or named Series objects with a database-style join.
+7,General functions,Data manipulations,pandas.merge_ordered,api/pandas.merge_ordered.html#pandas.merge_ordered,Perform a merge for ordered data with optional filling/interpolation.
+8,General functions,Data manipulations,pandas.merge_asof,api/pandas.merge_asof.html#pandas.merge_asof,Perform a merge by key distance.
+9,General functions,Data manipulations,pandas.concat,api/pandas.concat.html#pandas.concat,Concatenate pandas objects along a particular axis.
+10,General functions,Data manipulations,pandas.get_dummies,api/pandas.get_dummies.html#pandas.get_dummies,Convert categorical variable into dummy/indicator variables.
+11,General functions,Data manipulations,pandas.from_dummies,api/pandas.from_dummies.html#pandas.from_dummies,Create a categorical DataFrame from a DataFrame of dummy variables.
+12,General functions,Data manipulations,pandas.factorize,api/pandas.factorize.html#pandas.factorize,Encode the object as an enumerated type or categorical variable.
+13,General functions,Data manipulations,pandas.unique,api/pandas.unique.html#pandas.unique,Return unique values based on a hash table.
+14,General functions,Data manipulations,pandas.lreshape,api/pandas.lreshape.html#pandas.lreshape,Reshape wide-format data to long.
+15,General functions,Data manipulations,pandas.wide_to_long,api/pandas.wide_to_long.html#pandas.wide_to_long,Unpivot a DataFrame from wide to long format.
+16,General functions,Top-level missing data,pandas.isna,api/pandas.isna.html#pandas.isna,Detect missing values for an array-like object.
+17,General functions,Top-level missing data,pandas.isnull,api/pandas.isnull.html#pandas.isnull,Detect missing values for an array-like object.
+18,General functions,Top-level missing data,pandas.notna,api/pandas.notna.html#pandas.notna,Detect non-missing values for an array-like object.
+19,General functions,Top-level missing data,pandas.notnull,api/pandas.notnull.html#pandas.notnull,Detect non-missing values for an array-like object.
+20,General functions,Top-level dealing with numeric data,pandas.to_numeric,api/pandas.to_numeric.html#pandas.to_numeric,Convert argument to a numeric type.
+21,General functions,Top-level dealing with datetimelike data,pandas.to_datetime,api/pandas.to_datetime.html#pandas.to_datetime,Convert argument to datetime.
+22,General functions,Top-level dealing with datetimelike data,pandas.to_timedelta,api/pandas.to_timedelta.html#pandas.to_timedelta,Convert argument to timedelta.
+23,General functions,Top-level dealing with datetimelike data,pandas.date_range,api/pandas.date_range.html#pandas.date_range,Return a fixed frequency DatetimeIndex.
+24,General functions,Top-level dealing with datetimelike data,pandas.bdate_range,api/pandas.bdate_range.html#pandas.bdate_range,Return a fixed frequency DatetimeIndex with business day as the default.
+25,General functions,Top-level dealing with datetimelike data,pandas.period_range,api/pandas.period_range.html#pandas.period_range,Return a fixed frequency PeriodIndex.
+26,General functions,Top-level dealing with datetimelike data,pandas.timedelta_range,api/pandas.timedelta_range.html#pandas.timedelta_range,Return a fixed frequency TimedeltaIndex with day as the default.
+27,General functions,Top-level dealing with datetimelike data,pandas.infer_freq,api/pandas.infer_freq.html#pandas.infer_freq,Infer the most likely frequency given the input index.
+28,General functions,Top-level dealing with Interval data,pandas.interval_range,api/pandas.interval_range.html#pandas.interval_range,Return a fixed frequency IntervalIndex.
+29,General functions,Top-level evaluation,pandas.eval,api/pandas.eval.html#pandas.eval,Evaluate a Python expression as a string using various backends.
+30,General functions,Datetime formats,pandas.tseries.api.guess_datetime_format,api/pandas.tseries.api.guess_datetime_format.html#pandas.tseries.api.guess_datetime_format,Guess the datetime format of a given datetime string.
+31,General functions,Hashing,pandas.util.hash_array,api/pandas.util.hash_array.html#pandas.util.hash_array,"Given a 1d array, return an array of deterministic integers."
+32,General functions,Hashing,pandas.util.hash_pandas_object,api/pandas.util.hash_pandas_object.html#pandas.util.hash_pandas_object,Return a data hash of the Index/Series/DataFrame.
+33,General functions,Importing from other DataFrame libraries,pandas.api.interchange.from_dataframe,api/pandas.api.interchange.from_dataframe.html#pandas.api.interchange.from_dataframe,Build a pd.DataFrame from any DataFrame supporting the interchange protocol.
+0,DataFrame,Constructor,pandas.DataFrame,api/pandas.DataFrame.html#pandas.DataFrame,"Two-dimensional, size-mutable, potentially heterogeneous tabular data."
+1,DataFrame,Attributes and underlying data,pandas.DataFrame.index,api/pandas.DataFrame.index.html#pandas.DataFrame.index,The index (row labels) of the DataFrame.
+2,DataFrame,Attributes and underlying data,pandas.DataFrame.columns,api/pandas.DataFrame.columns.html#pandas.DataFrame.columns,The column labels of the DataFrame.
+3,DataFrame,Attributes and underlying data,pandas.DataFrame.dtypes,api/pandas.DataFrame.dtypes.html#pandas.DataFrame.dtypes,Return the dtypes in the DataFrame.
+4,DataFrame,Attributes and underlying data,pandas.DataFrame.info,api/pandas.DataFrame.info.html#pandas.DataFrame.info,Print a concise summary of a DataFrame.
+5,DataFrame,Attributes and underlying data,pandas.DataFrame.select_dtypes,api/pandas.DataFrame.select_dtypes.html#pandas.DataFrame.select_dtypes,Return a subset of the DataFrame's columns based on the column dtypes.
+6,DataFrame,Attributes and underlying data,pandas.DataFrame.values,api/pandas.DataFrame.values.html#pandas.DataFrame.values,Return a Numpy representation of the DataFrame.
+7,DataFrame,Attributes and underlying data,pandas.DataFrame.axes,api/pandas.DataFrame.axes.html#pandas.DataFrame.axes,Return a list representing the axes of the DataFrame.
+8,DataFrame,Attributes and underlying data,pandas.DataFrame.ndim,api/pandas.DataFrame.ndim.html#pandas.DataFrame.ndim,Return an int representing the number of axes / array dimensions.
+9,DataFrame,Attributes and underlying data,pandas.DataFrame.size,api/pandas.DataFrame.size.html#pandas.DataFrame.size,Return an int representing the number of elements in this object.
+10,DataFrame,Attributes and underlying data,pandas.DataFrame.shape,api/pandas.DataFrame.shape.html#pandas.DataFrame.shape,Return a tuple representing the dimensionality of the DataFrame.
+11,DataFrame,Attributes and underlying data,pandas.DataFrame.memory_usage,api/pandas.DataFrame.memory_usage.html#pandas.DataFrame.memory_usage,Return the memory usage of each column in bytes.
+12,DataFrame,Attributes and underlying data,pandas.DataFrame.empty,api/pandas.DataFrame.empty.html#pandas.DataFrame.empty,Indicator whether Series/DataFrame is empty.
+13,DataFrame,Attributes and underlying data,pandas.DataFrame.set_flags,api/pandas.DataFrame.set_flags.html#pandas.DataFrame.set_flags,Return a new object with updated flags.
+14,DataFrame,Conversion,pandas.DataFrame.astype,api/pandas.DataFrame.astype.html#pandas.DataFrame.astype,Cast a pandas object to a specified dtype dtype.
+15,DataFrame,Conversion,pandas.DataFrame.convert_dtypes,api/pandas.DataFrame.convert_dtypes.html#pandas.DataFrame.convert_dtypes,Convert columns to the best possible dtypes using dtypes supporting pd.NA.
+16,DataFrame,Conversion,pandas.DataFrame.infer_objects,api/pandas.DataFrame.infer_objects.html#pandas.DataFrame.infer_objects,Attempt to infer better dtypes for object columns.
+17,DataFrame,Conversion,pandas.DataFrame.copy,api/pandas.DataFrame.copy.html#pandas.DataFrame.copy,Make a copy of this object's indices and data.
+19,DataFrame,"Indexing, iteration",pandas.DataFrame.head,api/pandas.DataFrame.head.html#pandas.DataFrame.head,Return the first n rows.
+20,DataFrame,"Indexing, iteration",pandas.DataFrame.at,api/pandas.DataFrame.at.html#pandas.DataFrame.at,Access a single value for a row/column label pair.
+21,DataFrame,"Indexing, iteration",pandas.DataFrame.iat,api/pandas.DataFrame.iat.html#pandas.DataFrame.iat,Access a single value for a row/column pair by integer position.
+22,DataFrame,"Indexing, iteration",pandas.DataFrame.loc,api/pandas.DataFrame.loc.html#pandas.DataFrame.loc,Access a group of rows and columns by label(s) or a boolean array.
+24,DataFrame,"Indexing, iteration",pandas.DataFrame.insert,api/pandas.DataFrame.insert.html#pandas.DataFrame.insert,Insert column into DataFrame at specified location.
+25,DataFrame,"Indexing, iteration",pandas.DataFrame.__iter__,api/pandas.DataFrame.__iter__.html#pandas.DataFrame.__iter__,Iterate over info axis.
+26,DataFrame,"Indexing, iteration",pandas.DataFrame.items,api/pandas.DataFrame.items.html#pandas.DataFrame.items,"Iterate over (column name, Series) pairs."
+27,DataFrame,"Indexing, iteration",pandas.DataFrame.keys,api/pandas.DataFrame.keys.html#pandas.DataFrame.keys,Get the 'info axis' (see Indexing for more).
+28,DataFrame,"Indexing, iteration",pandas.DataFrame.iterrows,api/pandas.DataFrame.iterrows.html#pandas.DataFrame.iterrows,"Iterate over DataFrame rows as (index, Series) pairs."
+29,DataFrame,"Indexing, iteration",pandas.DataFrame.itertuples,api/pandas.DataFrame.itertuples.html#pandas.DataFrame.itertuples,Iterate over DataFrame rows as namedtuples.
+30,DataFrame,"Indexing, iteration",pandas.DataFrame.pop,api/pandas.DataFrame.pop.html#pandas.DataFrame.pop,Return item and drop from frame.
+31,DataFrame,"Indexing, iteration",pandas.DataFrame.tail,api/pandas.DataFrame.tail.html#pandas.DataFrame.tail,Return the last n rows.
+32,DataFrame,"Indexing, iteration",pandas.DataFrame.xs,api/pandas.DataFrame.xs.html#pandas.DataFrame.xs,Return cross-section from the Series/DataFrame.
+33,DataFrame,"Indexing, iteration",pandas.DataFrame.get,api/pandas.DataFrame.get.html#pandas.DataFrame.get,Get item from object for given key (ex: DataFrame column).
+34,DataFrame,"Indexing, iteration",pandas.DataFrame.isin,api/pandas.DataFrame.isin.html#pandas.DataFrame.isin,Whether each element in the DataFrame is contained in values.
+35,DataFrame,"Indexing, iteration",pandas.DataFrame.where,api/pandas.DataFrame.where.html#pandas.DataFrame.where,Replace values where the condition is False.
+36,DataFrame,"Indexing, iteration",pandas.DataFrame.mask,api/pandas.DataFrame.mask.html#pandas.DataFrame.mask,Replace values where the condition is True.
+37,DataFrame,"Indexing, iteration",pandas.DataFrame.query,api/pandas.DataFrame.query.html#pandas.DataFrame.query,Query the columns of a DataFrame with a boolean expression.
+38,DataFrame,Binary operator functions,pandas.DataFrame.__add__,api/pandas.DataFrame.__add__.html#pandas.DataFrame.__add__,"Get Addition of DataFrame and other, column-wise."
+39,DataFrame,Binary operator functions,pandas.DataFrame.add,api/pandas.DataFrame.add.html#pandas.DataFrame.add,"Get Addition of dataframe and other, element-wise (binary operator add)."
+40,DataFrame,Binary operator functions,pandas.DataFrame.sub,api/pandas.DataFrame.sub.html#pandas.DataFrame.sub,"Get Subtraction of dataframe and other, element-wise (binary operator sub)."
+41,DataFrame,Binary operator functions,pandas.DataFrame.mul,api/pandas.DataFrame.mul.html#pandas.DataFrame.mul,"Get Multiplication of dataframe and other, element-wise (binary operator mul)."
+42,DataFrame,Binary operator functions,pandas.DataFrame.div,api/pandas.DataFrame.div.html#pandas.DataFrame.div,"Get Floating division of dataframe and other, element-wise (binary operator truediv)."
+43,DataFrame,Binary operator functions,pandas.DataFrame.truediv,api/pandas.DataFrame.truediv.html#pandas.DataFrame.truediv,"Get Floating division of dataframe and other, element-wise (binary operator truediv)."
+44,DataFrame,Binary operator functions,pandas.DataFrame.floordiv,api/pandas.DataFrame.floordiv.html#pandas.DataFrame.floordiv,"Get Integer division of dataframe and other, element-wise (binary operator floordiv)."
+45,DataFrame,Binary operator functions,pandas.DataFrame.mod,api/pandas.DataFrame.mod.html#pandas.DataFrame.mod,"Get Modulo of dataframe and other, element-wise (binary operator mod)."
+46,DataFrame,Binary operator functions,pandas.DataFrame.pow,api/pandas.DataFrame.pow.html#pandas.DataFrame.pow,"Get Exponential power of dataframe and other, element-wise (binary operator pow)."
+47,DataFrame,Binary operator functions,pandas.DataFrame.dot,api/pandas.DataFrame.dot.html#pandas.DataFrame.dot,Compute the matrix multiplication between the DataFrame and other.
+48,DataFrame,Binary operator functions,pandas.DataFrame.radd,api/pandas.DataFrame.radd.html#pandas.DataFrame.radd,"Get Addition of dataframe and other, element-wise (binary operator radd)."
+49,DataFrame,Binary operator functions,pandas.DataFrame.rsub,api/pandas.DataFrame.rsub.html#pandas.DataFrame.rsub,"Get Subtraction of dataframe and other, element-wise (binary operator rsub)."
+50,DataFrame,Binary operator functions,pandas.DataFrame.rmul,api/pandas.DataFrame.rmul.html#pandas.DataFrame.rmul,"Get Multiplication of dataframe and other, element-wise (binary operator rmul)."
+51,DataFrame,Binary operator functions,pandas.DataFrame.rdiv,api/pandas.DataFrame.rdiv.html#pandas.DataFrame.rdiv,"Get Floating division of dataframe and other, element-wise (binary operator rtruediv)."
+52,DataFrame,Binary operator functions,pandas.DataFrame.rtruediv,api/pandas.DataFrame.rtruediv.html#pandas.DataFrame.rtruediv,"Get Floating division of dataframe and other, element-wise (binary operator rtruediv)."
+53,DataFrame,Binary operator functions,pandas.DataFrame.rfloordiv,api/pandas.DataFrame.rfloordiv.html#pandas.DataFrame.rfloordiv,"Get Integer division of dataframe and other, element-wise (binary operator rfloordiv)."
+54,DataFrame,Binary operator functions,pandas.DataFrame.rmod,api/pandas.DataFrame.rmod.html#pandas.DataFrame.rmod,"Get Modulo of dataframe and other, element-wise (binary operator rmod)."
+55,DataFrame,Binary operator functions,pandas.DataFrame.rpow,api/pandas.DataFrame.rpow.html#pandas.DataFrame.rpow,"Get Exponential power of dataframe and other, element-wise (binary operator rpow)."
+56,DataFrame,Binary operator functions,pandas.DataFrame.lt,api/pandas.DataFrame.lt.html#pandas.DataFrame.lt,"Get Less than of dataframe and other, element-wise (binary operator lt)."
+57,DataFrame,Binary operator functions,pandas.DataFrame.gt,api/pandas.DataFrame.gt.html#pandas.DataFrame.gt,"Get Greater than of dataframe and other, element-wise (binary operator gt)."
+58,DataFrame,Binary operator functions,pandas.DataFrame.le,api/pandas.DataFrame.le.html#pandas.DataFrame.le,"Get Less than or equal to of dataframe and other, element-wise (binary operator le)."
+59,DataFrame,Binary operator functions,pandas.DataFrame.ge,api/pandas.DataFrame.ge.html#pandas.DataFrame.ge,"Get Greater than or equal to of dataframe and other, element-wise (binary operator ge)."
+60,DataFrame,Binary operator functions,pandas.DataFrame.ne,api/pandas.DataFrame.ne.html#pandas.DataFrame.ne,"Get Not equal to of dataframe and other, element-wise (binary operator ne)."
+61,DataFrame,Binary operator functions,pandas.DataFrame.eq,api/pandas.DataFrame.eq.html#pandas.DataFrame.eq,"Get Equal to of dataframe and other, element-wise (binary operator eq)."
+62,DataFrame,Binary operator functions,pandas.DataFrame.combine,api/pandas.DataFrame.combine.html#pandas.DataFrame.combine,Perform column-wise combine with another DataFrame.
+63,DataFrame,Binary operator functions,pandas.DataFrame.combine_first,api/pandas.DataFrame.combine_first.html#pandas.DataFrame.combine_first,Update null elements with value in the same location in other.
+64,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.apply,api/pandas.DataFrame.apply.html#pandas.DataFrame.apply,Apply a function along an axis of the DataFrame.
+65,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.map,api/pandas.DataFrame.map.html#pandas.DataFrame.map,Apply a function to a Dataframe elementwise.
+67,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.pipe,api/pandas.DataFrame.pipe.html#pandas.DataFrame.pipe,Apply chainable functions that expect Series or DataFrames.
+68,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.agg,api/pandas.DataFrame.agg.html#pandas.DataFrame.agg,Aggregate using one or more operations over the specified axis.
+69,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.aggregate,api/pandas.DataFrame.aggregate.html#pandas.DataFrame.aggregate,Aggregate using one or more operations over the specified axis.
+70,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.transform,api/pandas.DataFrame.transform.html#pandas.DataFrame.transform,Call func on self producing a DataFrame with the same axis shape as self.
+71,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.groupby,api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby,Group DataFrame using a mapper or by a Series of columns.
+72,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.rolling,api/pandas.DataFrame.rolling.html#pandas.DataFrame.rolling,Provide rolling window calculations.
+73,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.expanding,api/pandas.DataFrame.expanding.html#pandas.DataFrame.expanding,Provide expanding window calculations.
+74,DataFrame,"Function application, GroupBy & window",pandas.DataFrame.ewm,api/pandas.DataFrame.ewm.html#pandas.DataFrame.ewm,Provide exponentially weighted (EW) calculations.
+75,DataFrame,Computations / descriptive stats,pandas.DataFrame.abs,api/pandas.DataFrame.abs.html#pandas.DataFrame.abs,Return a Series/DataFrame with absolute numeric value of each element.
+76,DataFrame,Computations / descriptive stats,pandas.DataFrame.all,api/pandas.DataFrame.all.html#pandas.DataFrame.all,"Return whether all elements are True, potentially over an axis."
+77,DataFrame,Computations / descriptive stats,pandas.DataFrame.any,api/pandas.DataFrame.any.html#pandas.DataFrame.any,"Return whether any element is True, potentially over an axis."
+78,DataFrame,Computations / descriptive stats,pandas.DataFrame.clip,api/pandas.DataFrame.clip.html#pandas.DataFrame.clip,Trim values at input threshold(s).
+79,DataFrame,Computations / descriptive stats,pandas.DataFrame.corr,api/pandas.DataFrame.corr.html#pandas.DataFrame.corr,"Compute pairwise correlation of columns, excluding NA/null values."
+80,DataFrame,Computations / descriptive stats,pandas.DataFrame.corrwith,api/pandas.DataFrame.corrwith.html#pandas.DataFrame.corrwith,Compute pairwise correlation.
+81,DataFrame,Computations / descriptive stats,pandas.DataFrame.count,api/pandas.DataFrame.count.html#pandas.DataFrame.count,Count non-NA cells for each column or row.
+82,DataFrame,Computations / descriptive stats,pandas.DataFrame.cov,api/pandas.DataFrame.cov.html#pandas.DataFrame.cov,"Compute pairwise covariance of columns, excluding NA/null values."
+83,DataFrame,Computations / descriptive stats,pandas.DataFrame.cummax,api/pandas.DataFrame.cummax.html#pandas.DataFrame.cummax,Return cumulative maximum over a DataFrame or Series axis.
+84,DataFrame,Computations / descriptive stats,pandas.DataFrame.cummin,api/pandas.DataFrame.cummin.html#pandas.DataFrame.cummin,Return cumulative minimum over a DataFrame or Series axis.
+85,DataFrame,Computations / descriptive stats,pandas.DataFrame.cumprod,api/pandas.DataFrame.cumprod.html#pandas.DataFrame.cumprod,Return cumulative product over a DataFrame or Series axis.
+86,DataFrame,Computations / descriptive stats,pandas.DataFrame.cumsum,api/pandas.DataFrame.cumsum.html#pandas.DataFrame.cumsum,Return cumulative sum over a DataFrame or Series axis.
+87,DataFrame,Computations / descriptive stats,pandas.DataFrame.describe,api/pandas.DataFrame.describe.html#pandas.DataFrame.describe,Generate descriptive statistics.
+88,DataFrame,Computations / descriptive stats,pandas.DataFrame.diff,api/pandas.DataFrame.diff.html#pandas.DataFrame.diff,First discrete difference of element.
+89,DataFrame,Computations / descriptive stats,pandas.DataFrame.eval,api/pandas.DataFrame.eval.html#pandas.DataFrame.eval,Evaluate a string describing operations on DataFrame columns.
+90,DataFrame,Computations / descriptive stats,pandas.DataFrame.kurt,api/pandas.DataFrame.kurt.html#pandas.DataFrame.kurt,Return unbiased kurtosis over requested axis.
+91,DataFrame,Computations / descriptive stats,pandas.DataFrame.kurtosis,api/pandas.DataFrame.kurtosis.html#pandas.DataFrame.kurtosis,Return unbiased kurtosis over requested axis.
+92,DataFrame,Computations / descriptive stats,pandas.DataFrame.max,api/pandas.DataFrame.max.html#pandas.DataFrame.max,Return the maximum of the values over the requested axis.
+93,DataFrame,Computations / descriptive stats,pandas.DataFrame.mean,api/pandas.DataFrame.mean.html#pandas.DataFrame.mean,Return the mean of the values over the requested axis.
+94,DataFrame,Computations / descriptive stats,pandas.DataFrame.median,api/pandas.DataFrame.median.html#pandas.DataFrame.median,Return the median of the values over the requested axis.
+95,DataFrame,Computations / descriptive stats,pandas.DataFrame.min,api/pandas.DataFrame.min.html#pandas.DataFrame.min,Return the minimum of the values over the requested axis.
+96,DataFrame,Computations / descriptive stats,pandas.DataFrame.mode,api/pandas.DataFrame.mode.html#pandas.DataFrame.mode,Get the mode(s) of each element along the selected axis.
+97,DataFrame,Computations / descriptive stats,pandas.DataFrame.pct_change,api/pandas.DataFrame.pct_change.html#pandas.DataFrame.pct_change,Fractional change between the current and a prior element.
+98,DataFrame,Computations / descriptive stats,pandas.DataFrame.prod,api/pandas.DataFrame.prod.html#pandas.DataFrame.prod,Return the product of the values over the requested axis.
+99,DataFrame,Computations / descriptive stats,pandas.DataFrame.product,api/pandas.DataFrame.product.html#pandas.DataFrame.product,Return the product of the values over the requested axis.
+100,DataFrame,Computations / descriptive stats,pandas.DataFrame.quantile,api/pandas.DataFrame.quantile.html#pandas.DataFrame.quantile,Return values at the given quantile over requested axis.
+101,DataFrame,Computations / descriptive stats,pandas.DataFrame.rank,api/pandas.DataFrame.rank.html#pandas.DataFrame.rank,Compute numerical data ranks (1 through n) along axis.
+102,DataFrame,Computations / descriptive stats,pandas.DataFrame.round,api/pandas.DataFrame.round.html#pandas.DataFrame.round,Round a DataFrame to a variable number of decimal places.
+103,DataFrame,Computations / descriptive stats,pandas.DataFrame.sem,api/pandas.DataFrame.sem.html#pandas.DataFrame.sem,Return unbiased standard error of the mean over requested axis.
+104,DataFrame,Computations / descriptive stats,pandas.DataFrame.skew,api/pandas.DataFrame.skew.html#pandas.DataFrame.skew,Return unbiased skew over requested axis.
+105,DataFrame,Computations / descriptive stats,pandas.DataFrame.sum,api/pandas.DataFrame.sum.html#pandas.DataFrame.sum,Return the sum of the values over the requested axis.
+106,DataFrame,Computations / descriptive stats,pandas.DataFrame.std,api/pandas.DataFrame.std.html#pandas.DataFrame.std,Return sample standard deviation over requested axis.
+107,DataFrame,Computations / descriptive stats,pandas.DataFrame.var,api/pandas.DataFrame.var.html#pandas.DataFrame.var,Return unbiased variance over requested axis.
+108,DataFrame,Computations / descriptive stats,pandas.DataFrame.nunique,api/pandas.DataFrame.nunique.html#pandas.DataFrame.nunique,Count number of distinct elements in specified axis.
+109,DataFrame,Computations / descriptive stats,pandas.DataFrame.value_counts,api/pandas.DataFrame.value_counts.html#pandas.DataFrame.value_counts,Return a Series containing the frequency of each distinct row in the Dataframe.
+110,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.add_prefix,api/pandas.DataFrame.add_prefix.html#pandas.DataFrame.add_prefix,Prefix labels with string prefix.
+111,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.add_suffix,api/pandas.DataFrame.add_suffix.html#pandas.DataFrame.add_suffix,Suffix labels with string suffix.
+112,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.align,api/pandas.DataFrame.align.html#pandas.DataFrame.align,Align two objects on their axes with the specified join method.
+113,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.at_time,api/pandas.DataFrame.at_time.html#pandas.DataFrame.at_time,"Select values at particular time of day (e.g., 9:30AM)."
+114,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.between_time,api/pandas.DataFrame.between_time.html#pandas.DataFrame.between_time,"Select values between particular times of the day (e.g., 9:00-9:30 AM)."
+115,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.drop,api/pandas.DataFrame.drop.html#pandas.DataFrame.drop,Drop specified labels from rows or columns.
+116,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.drop_duplicates,api/pandas.DataFrame.drop_duplicates.html#pandas.DataFrame.drop_duplicates,Return DataFrame with duplicate rows removed.
+117,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.duplicated,api/pandas.DataFrame.duplicated.html#pandas.DataFrame.duplicated,Return boolean Series denoting duplicate rows.
+118,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.equals,api/pandas.DataFrame.equals.html#pandas.DataFrame.equals,Test whether two objects contain the same elements.
+119,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.filter,api/pandas.DataFrame.filter.html#pandas.DataFrame.filter,Subset the dataframe rows or columns according to the specified index labels.
+121,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.head,api/pandas.DataFrame.head.html#pandas.DataFrame.head,Return the first n rows.
+122,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.idxmax,api/pandas.DataFrame.idxmax.html#pandas.DataFrame.idxmax,Return index of first occurrence of maximum over requested axis.
+123,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.idxmin,api/pandas.DataFrame.idxmin.html#pandas.DataFrame.idxmin,Return index of first occurrence of minimum over requested axis.
+125,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.reindex,api/pandas.DataFrame.reindex.html#pandas.DataFrame.reindex,Conform DataFrame to new index with optional filling logic.
+126,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.reindex_like,api/pandas.DataFrame.reindex_like.html#pandas.DataFrame.reindex_like,Return an object with matching indices as other object.
+127,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.rename,api/pandas.DataFrame.rename.html#pandas.DataFrame.rename,Rename columns or index labels.
+128,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.rename_axis,api/pandas.DataFrame.rename_axis.html#pandas.DataFrame.rename_axis,Set the name of the axis for the index or columns.
+129,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.reset_index,api/pandas.DataFrame.reset_index.html#pandas.DataFrame.reset_index,"Reset the index, or a level of it."
+130,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.sample,api/pandas.DataFrame.sample.html#pandas.DataFrame.sample,Return a random sample of items from an axis of object.
+131,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.set_axis,api/pandas.DataFrame.set_axis.html#pandas.DataFrame.set_axis,Assign desired index to given axis.
+132,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.set_index,api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index,Set the DataFrame index using existing columns.
+133,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.tail,api/pandas.DataFrame.tail.html#pandas.DataFrame.tail,Return the last n rows.
+134,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.take,api/pandas.DataFrame.take.html#pandas.DataFrame.take,Return the elements in the given positional indices along an axis.
+135,DataFrame,Reindexing / selection / label manipulation,pandas.DataFrame.truncate,api/pandas.DataFrame.truncate.html#pandas.DataFrame.truncate,Truncate a Series or DataFrame before and after some index value.
+137,DataFrame,Missing data handling,pandas.DataFrame.bfill,api/pandas.DataFrame.bfill.html#pandas.DataFrame.bfill,Fill NA/NaN values by using the next valid observation to fill the gap.
+138,DataFrame,Missing data handling,pandas.DataFrame.dropna,api/pandas.DataFrame.dropna.html#pandas.DataFrame.dropna,Remove missing values.
+139,DataFrame,Missing data handling,pandas.DataFrame.ffill,api/pandas.DataFrame.ffill.html#pandas.DataFrame.ffill,Fill NA/NaN values by propagating the last valid observation to next valid.
+140,DataFrame,Missing data handling,pandas.DataFrame.fillna,api/pandas.DataFrame.fillna.html#pandas.DataFrame.fillna,Fill NA/NaN values using the specified method.
+141,DataFrame,Missing data handling,pandas.DataFrame.interpolate,api/pandas.DataFrame.interpolate.html#pandas.DataFrame.interpolate,Fill NaN values using an interpolation method.
+142,DataFrame,Missing data handling,pandas.DataFrame.isna,api/pandas.DataFrame.isna.html#pandas.DataFrame.isna,Detect missing values.
+143,DataFrame,Missing data handling,pandas.DataFrame.isnull,api/pandas.DataFrame.isnull.html#pandas.DataFrame.isnull,DataFrame.isnull is an alias for DataFrame.isna.
+144,DataFrame,Missing data handling,pandas.DataFrame.notna,api/pandas.DataFrame.notna.html#pandas.DataFrame.notna,Detect existing (non-missing) values.
+145,DataFrame,Missing data handling,pandas.DataFrame.notnull,api/pandas.DataFrame.notnull.html#pandas.DataFrame.notnull,DataFrame.notnull is an alias for DataFrame.notna.
+147,DataFrame,Missing data handling,pandas.DataFrame.replace,api/pandas.DataFrame.replace.html#pandas.DataFrame.replace,Replace values given in to_replace with value.
+148,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.droplevel,api/pandas.DataFrame.droplevel.html#pandas.DataFrame.droplevel,Return Series/DataFrame with requested index / column level(s) removed.
+149,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.pivot,api/pandas.DataFrame.pivot.html#pandas.DataFrame.pivot,Return reshaped DataFrame organized by given index / column values.
+150,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.pivot_table,api/pandas.DataFrame.pivot_table.html#pandas.DataFrame.pivot_table,Create a spreadsheet-style pivot table as a DataFrame.
+151,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.reorder_levels,api/pandas.DataFrame.reorder_levels.html#pandas.DataFrame.reorder_levels,Rearrange index levels using input order.
+152,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.sort_values,api/pandas.DataFrame.sort_values.html#pandas.DataFrame.sort_values,Sort by the values along either axis.
+153,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.sort_index,api/pandas.DataFrame.sort_index.html#pandas.DataFrame.sort_index,Sort object by labels (along an axis).
+154,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.nlargest,api/pandas.DataFrame.nlargest.html#pandas.DataFrame.nlargest,Return the first n rows ordered by columns in descending order.
+155,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.nsmallest,api/pandas.DataFrame.nsmallest.html#pandas.DataFrame.nsmallest,Return the first n rows ordered by columns in ascending order.
+156,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.swaplevel,api/pandas.DataFrame.swaplevel.html#pandas.DataFrame.swaplevel,Swap levels i and j in a MultiIndex.
+157,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.stack,api/pandas.DataFrame.stack.html#pandas.DataFrame.stack,Stack the prescribed level(s) from columns to index.
+158,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.unstack,api/pandas.DataFrame.unstack.html#pandas.DataFrame.unstack,Pivot a level of the (necessarily hierarchical) index labels.
+160,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.melt,api/pandas.DataFrame.melt.html#pandas.DataFrame.melt,"Unpivot a DataFrame from wide to long format, optionally leaving identifiers set."
+161,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.explode,api/pandas.DataFrame.explode.html#pandas.DataFrame.explode,"Transform each element of a list-like to a row, replicating index values."
+162,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.squeeze,api/pandas.DataFrame.squeeze.html#pandas.DataFrame.squeeze,Squeeze 1 dimensional axis objects into scalars.
+163,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.to_xarray,api/pandas.DataFrame.to_xarray.html#pandas.DataFrame.to_xarray,Return an xarray object from the pandas object.
+164,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.T,api/pandas.DataFrame.T.html#pandas.DataFrame.T,The transpose of the DataFrame.
+165,DataFrame,"Reshaping, sorting, transposing",pandas.DataFrame.transpose,api/pandas.DataFrame.transpose.html#pandas.DataFrame.transpose,Transpose index and columns.
+166,DataFrame,Combining / comparing / joining / merging,pandas.DataFrame.assign,api/pandas.DataFrame.assign.html#pandas.DataFrame.assign,Assign new columns to a DataFrame.
+167,DataFrame,Combining / comparing / joining / merging,pandas.DataFrame.compare,api/pandas.DataFrame.compare.html#pandas.DataFrame.compare,Compare to another DataFrame and show the differences.
+168,DataFrame,Combining / comparing / joining / merging,pandas.DataFrame.join,api/pandas.DataFrame.join.html#pandas.DataFrame.join,Join columns of another DataFrame.
+169,DataFrame,Combining / comparing / joining / merging,pandas.DataFrame.merge,api/pandas.DataFrame.merge.html#pandas.DataFrame.merge,Merge DataFrame or named Series objects with a database-style join.
+170,DataFrame,Combining / comparing / joining / merging,pandas.DataFrame.update,api/pandas.DataFrame.update.html#pandas.DataFrame.update,Modify in place using non-NA values from another DataFrame.
+171,DataFrame,Time Series-related,pandas.DataFrame.asfreq,api/pandas.DataFrame.asfreq.html#pandas.DataFrame.asfreq,Convert time series to specified frequency.
+172,DataFrame,Time Series-related,pandas.DataFrame.asof,api/pandas.DataFrame.asof.html#pandas.DataFrame.asof,Return the last row(s) without any NaNs before where.
+173,DataFrame,Time Series-related,pandas.DataFrame.shift,api/pandas.DataFrame.shift.html#pandas.DataFrame.shift,Shift index by desired number of periods with an optional time freq.
+174,DataFrame,Time Series-related,pandas.DataFrame.first_valid_index,api/pandas.DataFrame.first_valid_index.html#pandas.DataFrame.first_valid_index,"Return index for first non-NA value or None, if no non-NA value is found."
+175,DataFrame,Time Series-related,pandas.DataFrame.last_valid_index,api/pandas.DataFrame.last_valid_index.html#pandas.DataFrame.last_valid_index,"Return index for last non-NA value or None, if no non-NA value is found."
+176,DataFrame,Time Series-related,pandas.DataFrame.resample,api/pandas.DataFrame.resample.html#pandas.DataFrame.resample,Resample time-series data.
+177,DataFrame,Time Series-related,pandas.DataFrame.to_period,api/pandas.DataFrame.to_period.html#pandas.DataFrame.to_period,Convert DataFrame from DatetimeIndex to PeriodIndex.
+178,DataFrame,Time Series-related,pandas.DataFrame.to_timestamp,api/pandas.DataFrame.to_timestamp.html#pandas.DataFrame.to_timestamp,"Cast to DatetimeIndex of timestamps, at beginning of period."
+179,DataFrame,Time Series-related,pandas.DataFrame.tz_convert,api/pandas.DataFrame.tz_convert.html#pandas.DataFrame.tz_convert,Convert tz-aware axis to target time zone.
+180,DataFrame,Time Series-related,pandas.DataFrame.tz_localize,api/pandas.DataFrame.tz_localize.html#pandas.DataFrame.tz_localize,Localize tz-naive index of a Series or DataFrame to target time zone.
+181,DataFrame,Flags,pandas.Flags,api/pandas.Flags.html#pandas.Flags,Flags that apply to pandas objects.
+182,DataFrame,Metadata,pandas.DataFrame.attrs,api/pandas.DataFrame.attrs.html#pandas.DataFrame.attrs,Dictionary of global attributes of this dataset.
+183,DataFrame,Plotting,pandas.DataFrame.plot,api/pandas.DataFrame.plot.html#pandas.DataFrame.plot,DataFrame plotting accessor and method
+184,DataFrame,Plotting,pandas.DataFrame.plot.area,api/pandas.DataFrame.plot.area.html#pandas.DataFrame.plot.area,Draw a stacked area plot.
+185,DataFrame,Plotting,pandas.DataFrame.plot.bar,api/pandas.DataFrame.plot.bar.html#pandas.DataFrame.plot.bar,Vertical bar plot.
+186,DataFrame,Plotting,pandas.DataFrame.plot.barh,api/pandas.DataFrame.plot.barh.html#pandas.DataFrame.plot.barh,Make a horizontal bar plot.
+187,DataFrame,Plotting,pandas.DataFrame.plot.box,api/pandas.DataFrame.plot.box.html#pandas.DataFrame.plot.box,Make a box plot of the DataFrame columns.
+188,DataFrame,Plotting,pandas.DataFrame.plot.density,api/pandas.DataFrame.plot.density.html#pandas.DataFrame.plot.density,Generate Kernel Density Estimate plot using Gaussian kernels.
+189,DataFrame,Plotting,pandas.DataFrame.plot.hexbin,api/pandas.DataFrame.plot.hexbin.html#pandas.DataFrame.plot.hexbin,Generate a hexagonal binning plot.
+190,DataFrame,Plotting,pandas.DataFrame.plot.hist,api/pandas.DataFrame.plot.hist.html#pandas.DataFrame.plot.hist,Draw one histogram of the DataFrame's columns.
+191,DataFrame,Plotting,pandas.DataFrame.plot.kde,api/pandas.DataFrame.plot.kde.html#pandas.DataFrame.plot.kde,Generate Kernel Density Estimate plot using Gaussian kernels.
+192,DataFrame,Plotting,pandas.DataFrame.plot.line,api/pandas.DataFrame.plot.line.html#pandas.DataFrame.plot.line,Plot Series or DataFrame as lines.
+193,DataFrame,Plotting,pandas.DataFrame.plot.pie,api/pandas.DataFrame.plot.pie.html#pandas.DataFrame.plot.pie,Generate a pie plot.
+194,DataFrame,Plotting,pandas.DataFrame.plot.scatter,api/pandas.DataFrame.plot.scatter.html#pandas.DataFrame.plot.scatter,Create a scatter plot with varying marker point size and color.
+195,DataFrame,Plotting,pandas.DataFrame.boxplot,api/pandas.DataFrame.boxplot.html#pandas.DataFrame.boxplot,Make a box plot from DataFrame columns.
+196,DataFrame,Plotting,pandas.DataFrame.hist,api/pandas.DataFrame.hist.html#pandas.DataFrame.hist,Make a histogram of the DataFrame's columns.
+197,DataFrame,Sparse accessor,pandas.DataFrame.sparse.density,api/pandas.DataFrame.sparse.density.html#pandas.DataFrame.sparse.density,Ratio of non-sparse points to total (dense) data points.
+198,DataFrame,Sparse accessor,pandas.DataFrame.sparse.from_spmatrix,api/pandas.DataFrame.sparse.from_spmatrix.html#pandas.DataFrame.sparse.from_spmatrix,Create a new DataFrame from a scipy sparse matrix.
+199,DataFrame,Sparse accessor,pandas.DataFrame.sparse.to_coo,api/pandas.DataFrame.sparse.to_coo.html#pandas.DataFrame.sparse.to_coo,Return the contents of the frame as a sparse SciPy COO matrix.
+200,DataFrame,Sparse accessor,pandas.DataFrame.sparse.to_dense,api/pandas.DataFrame.sparse.to_dense.html#pandas.DataFrame.sparse.to_dense,Convert a DataFrame with sparse values to dense.
+201,DataFrame,Serialization / IO / conversion,pandas.DataFrame.from_dict,api/pandas.DataFrame.from_dict.html#pandas.DataFrame.from_dict,Construct DataFrame from dict of array-like or dicts.
+202,DataFrame,Serialization / IO / conversion,pandas.DataFrame.from_records,api/pandas.DataFrame.from_records.html#pandas.DataFrame.from_records,Convert structured or record ndarray to DataFrame.
+203,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_orc,api/pandas.DataFrame.to_orc.html#pandas.DataFrame.to_orc,Write a DataFrame to the ORC format.
+204,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_parquet,api/pandas.DataFrame.to_parquet.html#pandas.DataFrame.to_parquet,Write a DataFrame to the binary parquet format.
+205,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_pickle,api/pandas.DataFrame.to_pickle.html#pandas.DataFrame.to_pickle,Pickle (serialize) object to file.
+206,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_csv,api/pandas.DataFrame.to_csv.html#pandas.DataFrame.to_csv,Write object to a comma-separated values (csv) file.
+207,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_hdf,api/pandas.DataFrame.to_hdf.html#pandas.DataFrame.to_hdf,Write the contained data to an HDF5 file using HDFStore.
+208,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_sql,api/pandas.DataFrame.to_sql.html#pandas.DataFrame.to_sql,Write records stored in a DataFrame to a SQL database.
+209,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_dict,api/pandas.DataFrame.to_dict.html#pandas.DataFrame.to_dict,Convert the DataFrame to a dictionary.
+210,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_excel,api/pandas.DataFrame.to_excel.html#pandas.DataFrame.to_excel,Write object to an Excel sheet.
+211,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_json,api/pandas.DataFrame.to_json.html#pandas.DataFrame.to_json,Convert the object to a JSON string.
+212,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_html,api/pandas.DataFrame.to_html.html#pandas.DataFrame.to_html,Render a DataFrame as an HTML table.
+213,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_feather,api/pandas.DataFrame.to_feather.html#pandas.DataFrame.to_feather,Write a DataFrame to the binary Feather format.
+214,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_latex,api/pandas.DataFrame.to_latex.html#pandas.DataFrame.to_latex,"Render object to a LaTeX tabular, longtable, or nested table."
+215,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_stata,api/pandas.DataFrame.to_stata.html#pandas.DataFrame.to_stata,Export DataFrame object to Stata dta format.
+217,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_records,api/pandas.DataFrame.to_records.html#pandas.DataFrame.to_records,Convert DataFrame to a NumPy record array.
+218,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_string,api/pandas.DataFrame.to_string.html#pandas.DataFrame.to_string,Render a DataFrame to a console-friendly tabular output.
+219,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_clipboard,api/pandas.DataFrame.to_clipboard.html#pandas.DataFrame.to_clipboard,Copy object to the system clipboard.
+220,DataFrame,Serialization / IO / conversion,pandas.DataFrame.to_markdown,api/pandas.DataFrame.to_markdown.html#pandas.DataFrame.to_markdown,Print DataFrame in Markdown-friendly format.
+221,DataFrame,Serialization / IO / conversion,pandas.DataFrame.style,api/pandas.DataFrame.style.html#pandas.DataFrame.style,Returns a Styler object.
+222,DataFrame,Serialization / IO / conversion,pandas.DataFrame.__dataframe__,api/pandas.DataFrame.__dataframe__.html#pandas.DataFrame.__dataframe__,Return the dataframe interchange object implementing the interchange protocol.
+0,Series,Constructor,pandas.Series,api/pandas.Series.html#pandas.Series,One-dimensional ndarray with axis labels (including time series).
+1,Series,Attributes,pandas.Series.index,api/pandas.Series.index.html#pandas.Series.index,The index (axis labels) of the Series.
+2,Series,Attributes,pandas.Series.array,api/pandas.Series.array.html#pandas.Series.array,The ExtensionArray of the data backing this Series or Index.
+3,Series,Attributes,pandas.Series.values,api/pandas.Series.values.html#pandas.Series.values,Return Series as ndarray or ndarray-like depending on the dtype.
+4,Series,Attributes,pandas.Series.dtype,api/pandas.Series.dtype.html#pandas.Series.dtype,Return the dtype object of the underlying data.
+5,Series,Attributes,pandas.Series.shape,api/pandas.Series.shape.html#pandas.Series.shape,Return a tuple of the shape of the underlying data.
+6,Series,Attributes,pandas.Series.nbytes,api/pandas.Series.nbytes.html#pandas.Series.nbytes,Return the number of bytes in the underlying data.
+7,Series,Attributes,pandas.Series.ndim,api/pandas.Series.ndim.html#pandas.Series.ndim,"Number of dimensions of the underlying data, by definition 1."
+8,Series,Attributes,pandas.Series.size,api/pandas.Series.size.html#pandas.Series.size,Return the number of elements in the underlying data.
+9,Series,Attributes,pandas.Series.T,api/pandas.Series.T.html#pandas.Series.T,"Return the transpose, which is by definition self."
+10,Series,Attributes,pandas.Series.memory_usage,api/pandas.Series.memory_usage.html#pandas.Series.memory_usage,Return the memory usage of the Series.
+11,Series,Attributes,pandas.Series.hasnans,api/pandas.Series.hasnans.html#pandas.Series.hasnans,Return True if there are any NaNs.
+12,Series,Attributes,pandas.Series.empty,api/pandas.Series.empty.html#pandas.Series.empty,Indicator whether Series/DataFrame is empty.
+13,Series,Attributes,pandas.Series.dtypes,api/pandas.Series.dtypes.html#pandas.Series.dtypes,Return the dtype object of the underlying data.
+14,Series,Attributes,pandas.Series.name,api/pandas.Series.name.html#pandas.Series.name,Return the name of the Series.
+15,Series,Attributes,pandas.Series.flags,api/pandas.Series.flags.html#pandas.Series.flags,Get the properties associated with this pandas object.
+16,Series,Attributes,pandas.Series.set_flags,api/pandas.Series.set_flags.html#pandas.Series.set_flags,Return a new object with updated flags.
+17,Series,Conversion,pandas.Series.astype,api/pandas.Series.astype.html#pandas.Series.astype,Cast a pandas object to a specified dtype dtype.
+18,Series,Conversion,pandas.Series.convert_dtypes,api/pandas.Series.convert_dtypes.html#pandas.Series.convert_dtypes,Convert columns to the best possible dtypes using dtypes supporting pd.NA.
+19,Series,Conversion,pandas.Series.infer_objects,api/pandas.Series.infer_objects.html#pandas.Series.infer_objects,Attempt to infer better dtypes for object columns.
+20,Series,Conversion,pandas.Series.copy,api/pandas.Series.copy.html#pandas.Series.copy,Make a copy of this object's indices and data.
+22,Series,Conversion,pandas.Series.to_numpy,api/pandas.Series.to_numpy.html#pandas.Series.to_numpy,A NumPy ndarray representing the values in this Series or Index.
+23,Series,Conversion,pandas.Series.to_period,api/pandas.Series.to_period.html#pandas.Series.to_period,Convert Series from DatetimeIndex to PeriodIndex.
+24,Series,Conversion,pandas.Series.to_timestamp,api/pandas.Series.to_timestamp.html#pandas.Series.to_timestamp,"Cast to DatetimeIndex of Timestamps, at beginning of period."
+25,Series,Conversion,pandas.Series.to_list,api/pandas.Series.to_list.html#pandas.Series.to_list,Return a list of the values.
+26,Series,Conversion,pandas.Series.__array__,api/pandas.Series.__array__.html#pandas.Series.__array__,Return the values as a NumPy array.
+27,Series,"Indexing, iteration",pandas.Series.get,api/pandas.Series.get.html#pandas.Series.get,Get item from object for given key (ex: DataFrame column).
+28,Series,"Indexing, iteration",pandas.Series.at,api/pandas.Series.at.html#pandas.Series.at,Access a single value for a row/column label pair.
+29,Series,"Indexing, iteration",pandas.Series.iat,api/pandas.Series.iat.html#pandas.Series.iat,Access a single value for a row/column pair by integer position.
+30,Series,"Indexing, iteration",pandas.Series.loc,api/pandas.Series.loc.html#pandas.Series.loc,Access a group of rows and columns by label(s) or a boolean array.
+32,Series,"Indexing, iteration",pandas.Series.__iter__,api/pandas.Series.__iter__.html#pandas.Series.__iter__,Return an iterator of the values.
+33,Series,"Indexing, iteration",pandas.Series.items,api/pandas.Series.items.html#pandas.Series.items,"Lazily iterate over (index, value) tuples."
+34,Series,"Indexing, iteration",pandas.Series.keys,api/pandas.Series.keys.html#pandas.Series.keys,Return alias for index.
+35,Series,"Indexing, iteration",pandas.Series.pop,api/pandas.Series.pop.html#pandas.Series.pop,Return item and drops from series.
+36,Series,"Indexing, iteration",pandas.Series.item,api/pandas.Series.item.html#pandas.Series.item,Return the first element of the underlying data as a Python scalar.
+37,Series,"Indexing, iteration",pandas.Series.xs,api/pandas.Series.xs.html#pandas.Series.xs,Return cross-section from the Series/DataFrame.
+38,Series,Binary operator functions,pandas.Series.add,api/pandas.Series.add.html#pandas.Series.add,"Return Addition of series and other, element-wise (binary operator add)."
+39,Series,Binary operator functions,pandas.Series.sub,api/pandas.Series.sub.html#pandas.Series.sub,"Return Subtraction of series and other, element-wise (binary operator sub)."
+40,Series,Binary operator functions,pandas.Series.mul,api/pandas.Series.mul.html#pandas.Series.mul,"Return Multiplication of series and other, element-wise (binary operator mul)."
+41,Series,Binary operator functions,pandas.Series.div,api/pandas.Series.div.html#pandas.Series.div,"Return Floating division of series and other, element-wise (binary operator truediv)."
+42,Series,Binary operator functions,pandas.Series.truediv,api/pandas.Series.truediv.html#pandas.Series.truediv,"Return Floating division of series and other, element-wise (binary operator truediv)."
+43,Series,Binary operator functions,pandas.Series.floordiv,api/pandas.Series.floordiv.html#pandas.Series.floordiv,"Return Integer division of series and other, element-wise (binary operator floordiv)."
+44,Series,Binary operator functions,pandas.Series.mod,api/pandas.Series.mod.html#pandas.Series.mod,"Return Modulo of series and other, element-wise (binary operator mod)."
+45,Series,Binary operator functions,pandas.Series.pow,api/pandas.Series.pow.html#pandas.Series.pow,"Return Exponential power of series and other, element-wise (binary operator pow)."
+46,Series,Binary operator functions,pandas.Series.radd,api/pandas.Series.radd.html#pandas.Series.radd,"Return Addition of series and other, element-wise (binary operator radd)."
+47,Series,Binary operator functions,pandas.Series.rsub,api/pandas.Series.rsub.html#pandas.Series.rsub,"Return Subtraction of series and other, element-wise (binary operator rsub)."
+48,Series,Binary operator functions,pandas.Series.rmul,api/pandas.Series.rmul.html#pandas.Series.rmul,"Return Multiplication of series and other, element-wise (binary operator rmul)."
+49,Series,Binary operator functions,pandas.Series.rdiv,api/pandas.Series.rdiv.html#pandas.Series.rdiv,"Return Floating division of series and other, element-wise (binary operator rtruediv)."
+50,Series,Binary operator functions,pandas.Series.rtruediv,api/pandas.Series.rtruediv.html#pandas.Series.rtruediv,"Return Floating division of series and other, element-wise (binary operator rtruediv)."
+51,Series,Binary operator functions,pandas.Series.rfloordiv,api/pandas.Series.rfloordiv.html#pandas.Series.rfloordiv,"Return Integer division of series and other, element-wise (binary operator rfloordiv)."
+52,Series,Binary operator functions,pandas.Series.rmod,api/pandas.Series.rmod.html#pandas.Series.rmod,"Return Modulo of series and other, element-wise (binary operator rmod)."
+53,Series,Binary operator functions,pandas.Series.rpow,api/pandas.Series.rpow.html#pandas.Series.rpow,"Return Exponential power of series and other, element-wise (binary operator rpow)."
+54,Series,Binary operator functions,pandas.Series.combine,api/pandas.Series.combine.html#pandas.Series.combine,Combine the Series with a Series or scalar according to func.
+55,Series,Binary operator functions,pandas.Series.combine_first,api/pandas.Series.combine_first.html#pandas.Series.combine_first,Update null elements with value in the same location in 'other'.
+56,Series,Binary operator functions,pandas.Series.round,api/pandas.Series.round.html#pandas.Series.round,Round each value in a Series to the given number of decimals.
+57,Series,Binary operator functions,pandas.Series.lt,api/pandas.Series.lt.html#pandas.Series.lt,"Return Less than of series and other, element-wise (binary operator lt)."
+58,Series,Binary operator functions,pandas.Series.gt,api/pandas.Series.gt.html#pandas.Series.gt,"Return Greater than of series and other, element-wise (binary operator gt)."
+59,Series,Binary operator functions,pandas.Series.le,api/pandas.Series.le.html#pandas.Series.le,"Return Less than or equal to of series and other, element-wise (binary operator le)."
+60,Series,Binary operator functions,pandas.Series.ge,api/pandas.Series.ge.html#pandas.Series.ge,"Return Greater than or equal to of series and other, element-wise (binary operator ge)."
+61,Series,Binary operator functions,pandas.Series.ne,api/pandas.Series.ne.html#pandas.Series.ne,"Return Not equal to of series and other, element-wise (binary operator ne)."
+62,Series,Binary operator functions,pandas.Series.eq,api/pandas.Series.eq.html#pandas.Series.eq,"Return Equal to of series and other, element-wise (binary operator eq)."
+63,Series,Binary operator functions,pandas.Series.product,api/pandas.Series.product.html#pandas.Series.product,Return the product of the values over the requested axis.
+64,Series,Binary operator functions,pandas.Series.dot,api/pandas.Series.dot.html#pandas.Series.dot,Compute the dot product between the Series and the columns of other.
+65,Series,"Function application, GroupBy & window",pandas.Series.apply,api/pandas.Series.apply.html#pandas.Series.apply,Invoke function on values of Series.
+66,Series,"Function application, GroupBy & window",pandas.Series.agg,api/pandas.Series.agg.html#pandas.Series.agg,Aggregate using one or more operations over the specified axis.
+67,Series,"Function application, GroupBy & window",pandas.Series.aggregate,api/pandas.Series.aggregate.html#pandas.Series.aggregate,Aggregate using one or more operations over the specified axis.
+68,Series,"Function application, GroupBy & window",pandas.Series.transform,api/pandas.Series.transform.html#pandas.Series.transform,Call func on self producing a Series with the same axis shape as self.
+69,Series,"Function application, GroupBy & window",pandas.Series.map,api/pandas.Series.map.html#pandas.Series.map,Map values of Series according to an input mapping or function.
+70,Series,"Function application, GroupBy & window",pandas.Series.groupby,api/pandas.Series.groupby.html#pandas.Series.groupby,Group Series using a mapper or by a Series of columns.
+71,Series,"Function application, GroupBy & window",pandas.Series.rolling,api/pandas.Series.rolling.html#pandas.Series.rolling,Provide rolling window calculations.
+72,Series,"Function application, GroupBy & window",pandas.Series.expanding,api/pandas.Series.expanding.html#pandas.Series.expanding,Provide expanding window calculations.
+73,Series,"Function application, GroupBy & window",pandas.Series.ewm,api/pandas.Series.ewm.html#pandas.Series.ewm,Provide exponentially weighted (EW) calculations.
+74,Series,"Function application, GroupBy & window",pandas.Series.pipe,api/pandas.Series.pipe.html#pandas.Series.pipe,Apply chainable functions that expect Series or DataFrames.
+75,Series,Computations / descriptive stats,pandas.Series.abs,api/pandas.Series.abs.html#pandas.Series.abs,Return a Series/DataFrame with absolute numeric value of each element.
+76,Series,Computations / descriptive stats,pandas.Series.all,api/pandas.Series.all.html#pandas.Series.all,"Return whether all elements are True, potentially over an axis."
+77,Series,Computations / descriptive stats,pandas.Series.any,api/pandas.Series.any.html#pandas.Series.any,"Return whether any element is True, potentially over an axis."
+78,Series,Computations / descriptive stats,pandas.Series.autocorr,api/pandas.Series.autocorr.html#pandas.Series.autocorr,Compute the lag-N autocorrelation.
+79,Series,Computations / descriptive stats,pandas.Series.between,api/pandas.Series.between.html#pandas.Series.between,Return boolean Series equivalent to left <= series <= right.
+80,Series,Computations / descriptive stats,pandas.Series.clip,api/pandas.Series.clip.html#pandas.Series.clip,Trim values at input threshold(s).
+81,Series,Computations / descriptive stats,pandas.Series.corr,api/pandas.Series.corr.html#pandas.Series.corr,"Compute correlation with other Series, excluding missing values."
+82,Series,Computations / descriptive stats,pandas.Series.count,api/pandas.Series.count.html#pandas.Series.count,Return number of non-NA/null observations in the Series.
+83,Series,Computations / descriptive stats,pandas.Series.cov,api/pandas.Series.cov.html#pandas.Series.cov,"Compute covariance with Series, excluding missing values."
+84,Series,Computations / descriptive stats,pandas.Series.cummax,api/pandas.Series.cummax.html#pandas.Series.cummax,Return cumulative maximum over a DataFrame or Series axis.
+85,Series,Computations / descriptive stats,pandas.Series.cummin,api/pandas.Series.cummin.html#pandas.Series.cummin,Return cumulative minimum over a DataFrame or Series axis.
+86,Series,Computations / descriptive stats,pandas.Series.cumprod,api/pandas.Series.cumprod.html#pandas.Series.cumprod,Return cumulative product over a DataFrame or Series axis.
+87,Series,Computations / descriptive stats,pandas.Series.cumsum,api/pandas.Series.cumsum.html#pandas.Series.cumsum,Return cumulative sum over a DataFrame or Series axis.
+88,Series,Computations / descriptive stats,pandas.Series.describe,api/pandas.Series.describe.html#pandas.Series.describe,Generate descriptive statistics.
+89,Series,Computations / descriptive stats,pandas.Series.diff,api/pandas.Series.diff.html#pandas.Series.diff,First discrete difference of element.
+90,Series,Computations / descriptive stats,pandas.Series.factorize,api/pandas.Series.factorize.html#pandas.Series.factorize,Encode the object as an enumerated type or categorical variable.
+91,Series,Computations / descriptive stats,pandas.Series.kurt,api/pandas.Series.kurt.html#pandas.Series.kurt,Return unbiased kurtosis over requested axis.
+92,Series,Computations / descriptive stats,pandas.Series.max,api/pandas.Series.max.html#pandas.Series.max,Return the maximum of the values over the requested axis.
+93,Series,Computations / descriptive stats,pandas.Series.mean,api/pandas.Series.mean.html#pandas.Series.mean,Return the mean of the values over the requested axis.
+94,Series,Computations / descriptive stats,pandas.Series.median,api/pandas.Series.median.html#pandas.Series.median,Return the median of the values over the requested axis.
+95,Series,Computations / descriptive stats,pandas.Series.min,api/pandas.Series.min.html#pandas.Series.min,Return the minimum of the values over the requested axis.
+96,Series,Computations / descriptive stats,pandas.Series.mode,api/pandas.Series.mode.html#pandas.Series.mode,Return the mode(s) of the Series.
+97,Series,Computations / descriptive stats,pandas.Series.nlargest,api/pandas.Series.nlargest.html#pandas.Series.nlargest,Return the largest n elements.
+98,Series,Computations / descriptive stats,pandas.Series.nsmallest,api/pandas.Series.nsmallest.html#pandas.Series.nsmallest,Return the smallest n elements.
+99,Series,Computations / descriptive stats,pandas.Series.pct_change,api/pandas.Series.pct_change.html#pandas.Series.pct_change,Fractional change between the current and a prior element.
+100,Series,Computations / descriptive stats,pandas.Series.prod,api/pandas.Series.prod.html#pandas.Series.prod,Return the product of the values over the requested axis.
+101,Series,Computations / descriptive stats,pandas.Series.quantile,api/pandas.Series.quantile.html#pandas.Series.quantile,Return value at the given quantile.
+102,Series,Computations / descriptive stats,pandas.Series.rank,api/pandas.Series.rank.html#pandas.Series.rank,Compute numerical data ranks (1 through n) along axis.
+103,Series,Computations / descriptive stats,pandas.Series.sem,api/pandas.Series.sem.html#pandas.Series.sem,Return unbiased standard error of the mean over requested axis.
+104,Series,Computations / descriptive stats,pandas.Series.skew,api/pandas.Series.skew.html#pandas.Series.skew,Return unbiased skew over requested axis.
+105,Series,Computations / descriptive stats,pandas.Series.std,api/pandas.Series.std.html#pandas.Series.std,Return sample standard deviation over requested axis.
+106,Series,Computations / descriptive stats,pandas.Series.sum,api/pandas.Series.sum.html#pandas.Series.sum,Return the sum of the values over the requested axis.
+107,Series,Computations / descriptive stats,pandas.Series.var,api/pandas.Series.var.html#pandas.Series.var,Return unbiased variance over requested axis.
+108,Series,Computations / descriptive stats,pandas.Series.kurtosis,api/pandas.Series.kurtosis.html#pandas.Series.kurtosis,Return unbiased kurtosis over requested axis.
+109,Series,Computations / descriptive stats,pandas.Series.unique,api/pandas.Series.unique.html#pandas.Series.unique,Return unique values of Series object.
+110,Series,Computations / descriptive stats,pandas.Series.nunique,api/pandas.Series.nunique.html#pandas.Series.nunique,Return number of unique elements in the object.
+111,Series,Computations / descriptive stats,pandas.Series.is_unique,api/pandas.Series.is_unique.html#pandas.Series.is_unique,Return boolean if values in the object are unique.
+112,Series,Computations / descriptive stats,pandas.Series.is_monotonic_increasing,api/pandas.Series.is_monotonic_increasing.html#pandas.Series.is_monotonic_increasing,Return boolean if values in the object are monotonically increasing.
+113,Series,Computations / descriptive stats,pandas.Series.is_monotonic_decreasing,api/pandas.Series.is_monotonic_decreasing.html#pandas.Series.is_monotonic_decreasing,Return boolean if values in the object are monotonically decreasing.
+114,Series,Computations / descriptive stats,pandas.Series.value_counts,api/pandas.Series.value_counts.html#pandas.Series.value_counts,Return a Series containing counts of unique values.
+115,Series,Reindexing / selection / label manipulation,pandas.Series.align,api/pandas.Series.align.html#pandas.Series.align,Align two objects on their axes with the specified join method.
+116,Series,Reindexing / selection / label manipulation,pandas.Series.case_when,api/pandas.Series.case_when.html#pandas.Series.case_when,Replace values where the conditions are True.
+117,Series,Reindexing / selection / label manipulation,pandas.Series.drop,api/pandas.Series.drop.html#pandas.Series.drop,Return Series with specified index labels removed.
+118,Series,Reindexing / selection / label manipulation,pandas.Series.droplevel,api/pandas.Series.droplevel.html#pandas.Series.droplevel,Return Series/DataFrame with requested index / column level(s) removed.
+119,Series,Reindexing / selection / label manipulation,pandas.Series.drop_duplicates,api/pandas.Series.drop_duplicates.html#pandas.Series.drop_duplicates,Return Series with duplicate values removed.
+120,Series,Reindexing / selection / label manipulation,pandas.Series.duplicated,api/pandas.Series.duplicated.html#pandas.Series.duplicated,Indicate duplicate Series values.
+121,Series,Reindexing / selection / label manipulation,pandas.Series.equals,api/pandas.Series.equals.html#pandas.Series.equals,Test whether two objects contain the same elements.
+123,Series,Reindexing / selection / label manipulation,pandas.Series.head,api/pandas.Series.head.html#pandas.Series.head,Return the first n rows.
+124,Series,Reindexing / selection / label manipulation,pandas.Series.idxmax,api/pandas.Series.idxmax.html#pandas.Series.idxmax,Return the row label of the maximum value.
+125,Series,Reindexing / selection / label manipulation,pandas.Series.idxmin,api/pandas.Series.idxmin.html#pandas.Series.idxmin,Return the row label of the minimum value.
+126,Series,Reindexing / selection / label manipulation,pandas.Series.isin,api/pandas.Series.isin.html#pandas.Series.isin,Whether elements in Series are contained in values.
+128,Series,Reindexing / selection / label manipulation,pandas.Series.reindex,api/pandas.Series.reindex.html#pandas.Series.reindex,Conform Series to new index with optional filling logic.
+129,Series,Reindexing / selection / label manipulation,pandas.Series.reindex_like,api/pandas.Series.reindex_like.html#pandas.Series.reindex_like,Return an object with matching indices as other object.
+130,Series,Reindexing / selection / label manipulation,pandas.Series.rename,api/pandas.Series.rename.html#pandas.Series.rename,Alter Series index labels or name.
+131,Series,Reindexing / selection / label manipulation,pandas.Series.rename_axis,api/pandas.Series.rename_axis.html#pandas.Series.rename_axis,Set the name of the axis for the index or columns.
+132,Series,Reindexing / selection / label manipulation,pandas.Series.reset_index,api/pandas.Series.reset_index.html#pandas.Series.reset_index,Generate a new DataFrame or Series with the index reset.
+133,Series,Reindexing / selection / label manipulation,pandas.Series.sample,api/pandas.Series.sample.html#pandas.Series.sample,Return a random sample of items from an axis of object.
+134,Series,Reindexing / selection / label manipulation,pandas.Series.set_axis,api/pandas.Series.set_axis.html#pandas.Series.set_axis,Assign desired index to given axis.
+135,Series,Reindexing / selection / label manipulation,pandas.Series.take,api/pandas.Series.take.html#pandas.Series.take,Return the elements in the given positional indices along an axis.
+136,Series,Reindexing / selection / label manipulation,pandas.Series.tail,api/pandas.Series.tail.html#pandas.Series.tail,Return the last n rows.
+137,Series,Reindexing / selection / label manipulation,pandas.Series.truncate,api/pandas.Series.truncate.html#pandas.Series.truncate,Truncate a Series or DataFrame before and after some index value.
+138,Series,Reindexing / selection / label manipulation,pandas.Series.where,api/pandas.Series.where.html#pandas.Series.where,Replace values where the condition is False.
+139,Series,Reindexing / selection / label manipulation,pandas.Series.mask,api/pandas.Series.mask.html#pandas.Series.mask,Replace values where the condition is True.
+140,Series,Reindexing / selection / label manipulation,pandas.Series.add_prefix,api/pandas.Series.add_prefix.html#pandas.Series.add_prefix,Prefix labels with string prefix.
+141,Series,Reindexing / selection / label manipulation,pandas.Series.add_suffix,api/pandas.Series.add_suffix.html#pandas.Series.add_suffix,Suffix labels with string suffix.
+142,Series,Reindexing / selection / label manipulation,pandas.Series.filter,api/pandas.Series.filter.html#pandas.Series.filter,Subset the dataframe rows or columns according to the specified index labels.
+144,Series,Missing data handling,pandas.Series.bfill,api/pandas.Series.bfill.html#pandas.Series.bfill,Fill NA/NaN values by using the next valid observation to fill the gap.
+145,Series,Missing data handling,pandas.Series.dropna,api/pandas.Series.dropna.html#pandas.Series.dropna,Return a new Series with missing values removed.
+146,Series,Missing data handling,pandas.Series.ffill,api/pandas.Series.ffill.html#pandas.Series.ffill,Fill NA/NaN values by propagating the last valid observation to next valid.
+147,Series,Missing data handling,pandas.Series.fillna,api/pandas.Series.fillna.html#pandas.Series.fillna,Fill NA/NaN values using the specified method.
+148,Series,Missing data handling,pandas.Series.interpolate,api/pandas.Series.interpolate.html#pandas.Series.interpolate,Fill NaN values using an interpolation method.
+149,Series,Missing data handling,pandas.Series.isna,api/pandas.Series.isna.html#pandas.Series.isna,Detect missing values.
+150,Series,Missing data handling,pandas.Series.isnull,api/pandas.Series.isnull.html#pandas.Series.isnull,Series.isnull is an alias for Series.isna.
+151,Series,Missing data handling,pandas.Series.notna,api/pandas.Series.notna.html#pandas.Series.notna,Detect existing (non-missing) values.
+152,Series,Missing data handling,pandas.Series.notnull,api/pandas.Series.notnull.html#pandas.Series.notnull,Series.notnull is an alias for Series.notna.
+154,Series,Missing data handling,pandas.Series.replace,api/pandas.Series.replace.html#pandas.Series.replace,Replace values given in to_replace with value.
+155,Series,"Reshaping, sorting",pandas.Series.argsort,api/pandas.Series.argsort.html#pandas.Series.argsort,Return the integer indices that would sort the Series values.
+156,Series,"Reshaping, sorting",pandas.Series.argmin,api/pandas.Series.argmin.html#pandas.Series.argmin,Return int position of the smallest value in the Series.
+157,Series,"Reshaping, sorting",pandas.Series.argmax,api/pandas.Series.argmax.html#pandas.Series.argmax,Return int position of the largest value in the Series.
+158,Series,"Reshaping, sorting",pandas.Series.reorder_levels,api/pandas.Series.reorder_levels.html#pandas.Series.reorder_levels,Rearrange index levels using input order.
+159,Series,"Reshaping, sorting",pandas.Series.sort_values,api/pandas.Series.sort_values.html#pandas.Series.sort_values,Sort by the values.
+160,Series,"Reshaping, sorting",pandas.Series.sort_index,api/pandas.Series.sort_index.html#pandas.Series.sort_index,Sort Series by index labels.
+161,Series,"Reshaping, sorting",pandas.Series.swaplevel,api/pandas.Series.swaplevel.html#pandas.Series.swaplevel,Swap levels i and j in a MultiIndex.
+162,Series,"Reshaping, sorting",pandas.Series.unstack,api/pandas.Series.unstack.html#pandas.Series.unstack,"Unstack, also known as pivot, Series with MultiIndex to produce DataFrame."
+163,Series,"Reshaping, sorting",pandas.Series.explode,api/pandas.Series.explode.html#pandas.Series.explode,Transform each element of a list-like to a row.
+164,Series,"Reshaping, sorting",pandas.Series.searchsorted,api/pandas.Series.searchsorted.html#pandas.Series.searchsorted,Find indices where elements should be inserted to maintain order.
+166,Series,"Reshaping, sorting",pandas.Series.repeat,api/pandas.Series.repeat.html#pandas.Series.repeat,Repeat elements of a Series.
+167,Series,"Reshaping, sorting",pandas.Series.squeeze,api/pandas.Series.squeeze.html#pandas.Series.squeeze,Squeeze 1 dimensional axis objects into scalars.
+169,Series,Combining / comparing / joining / merging,pandas.Series.compare,api/pandas.Series.compare.html#pandas.Series.compare,Compare to another Series and show the differences.
+170,Series,Combining / comparing / joining / merging,pandas.Series.update,api/pandas.Series.update.html#pandas.Series.update,Modify Series in place using values from passed Series.
+171,Series,Time Series-related,pandas.Series.asfreq,api/pandas.Series.asfreq.html#pandas.Series.asfreq,Convert time series to specified frequency.
+172,Series,Time Series-related,pandas.Series.asof,api/pandas.Series.asof.html#pandas.Series.asof,Return the last row(s) without any NaNs before where.
+173,Series,Time Series-related,pandas.Series.shift,api/pandas.Series.shift.html#pandas.Series.shift,Shift index by desired number of periods with an optional time freq.
+174,Series,Time Series-related,pandas.Series.first_valid_index,api/pandas.Series.first_valid_index.html#pandas.Series.first_valid_index,"Return index for first non-NA value or None, if no non-NA value is found."
+175,Series,Time Series-related,pandas.Series.last_valid_index,api/pandas.Series.last_valid_index.html#pandas.Series.last_valid_index,"Return index for last non-NA value or None, if no non-NA value is found."
+176,Series,Time Series-related,pandas.Series.resample,api/pandas.Series.resample.html#pandas.Series.resample,Resample time-series data.
+177,Series,Time Series-related,pandas.Series.tz_convert,api/pandas.Series.tz_convert.html#pandas.Series.tz_convert,Convert tz-aware axis to target time zone.
+178,Series,Time Series-related,pandas.Series.tz_localize,api/pandas.Series.tz_localize.html#pandas.Series.tz_localize,Localize tz-naive index of a Series or DataFrame to target time zone.
+179,Series,Time Series-related,pandas.Series.at_time,api/pandas.Series.at_time.html#pandas.Series.at_time,"Select values at particular time of day (e.g., 9:30AM)."
+180,Series,Time Series-related,pandas.Series.between_time,api/pandas.Series.between_time.html#pandas.Series.between_time,"Select values between particular times of the day (e.g., 9:00-9:30 AM)."
+181,Series,Accessors,pandas.Series.str,api/pandas.Series.str.html#pandas.Series.str,alias of StringMethods
+182,Series,Accessors,pandas.Series.cat,api/pandas.Series.cat.html#pandas.Series.cat,alias of CategoricalAccessor
+183,Series,Accessors,pandas.Series.dt,api/pandas.Series.dt.html#pandas.Series.dt,alias of CombinedDatetimelikeProperties
+184,Series,Accessors,pandas.Series.sparse,api/pandas.Series.sparse.html#pandas.Series.sparse,alias of SparseAccessor
+185,Series,Accessors,pandas.DataFrame.sparse,api/pandas.DataFrame.sparse.html#pandas.DataFrame.sparse,alias of SparseFrameAccessor
+186,Series,Accessors,pandas.Index.str,api/pandas.Index.str.html#pandas.Index.str,alias of StringMethods
+187,Series,Plotting,pandas.Series.plot,api/pandas.Series.plot.html#pandas.Series.plot,Series plotting accessor and method
+188,Series,Plotting,pandas.Series.plot.area,api/pandas.Series.plot.area.html#pandas.Series.plot.area,Draw a stacked area plot.
+189,Series,Plotting,pandas.Series.plot.bar,api/pandas.Series.plot.bar.html#pandas.Series.plot.bar,Vertical bar plot.
+190,Series,Plotting,pandas.Series.plot.barh,api/pandas.Series.plot.barh.html#pandas.Series.plot.barh,Make a horizontal bar plot.
+191,Series,Plotting,pandas.Series.plot.box,api/pandas.Series.plot.box.html#pandas.Series.plot.box,Make a box plot of the DataFrame columns.
+192,Series,Plotting,pandas.Series.plot.density,api/pandas.Series.plot.density.html#pandas.Series.plot.density,Generate Kernel Density Estimate plot using Gaussian kernels.
+193,Series,Plotting,pandas.Series.plot.hist,api/pandas.Series.plot.hist.html#pandas.Series.plot.hist,Draw one histogram of the DataFrame's columns.
+194,Series,Plotting,pandas.Series.plot.kde,api/pandas.Series.plot.kde.html#pandas.Series.plot.kde,Generate Kernel Density Estimate plot using Gaussian kernels.
+195,Series,Plotting,pandas.Series.plot.line,api/pandas.Series.plot.line.html#pandas.Series.plot.line,Plot Series or DataFrame as lines.
+196,Series,Plotting,pandas.Series.plot.pie,api/pandas.Series.plot.pie.html#pandas.Series.plot.pie,Generate a pie plot.
+197,Series,Plotting,pandas.Series.hist,api/pandas.Series.hist.html#pandas.Series.hist,Draw histogram of the input series using matplotlib.
+198,Series,Serialization / IO / conversion,pandas.Series.to_pickle,api/pandas.Series.to_pickle.html#pandas.Series.to_pickle,Pickle (serialize) object to file.
+199,Series,Serialization / IO / conversion,pandas.Series.to_csv,api/pandas.Series.to_csv.html#pandas.Series.to_csv,Write object to a comma-separated values (csv) file.
+200,Series,Serialization / IO / conversion,pandas.Series.to_dict,api/pandas.Series.to_dict.html#pandas.Series.to_dict,Convert Series to {label -> value} dict or dict-like object.
+201,Series,Serialization / IO / conversion,pandas.Series.to_excel,api/pandas.Series.to_excel.html#pandas.Series.to_excel,Write object to an Excel sheet.
+202,Series,Serialization / IO / conversion,pandas.Series.to_frame,api/pandas.Series.to_frame.html#pandas.Series.to_frame,Convert Series to DataFrame.
+203,Series,Serialization / IO / conversion,pandas.Series.to_xarray,api/pandas.Series.to_xarray.html#pandas.Series.to_xarray,Return an xarray object from the pandas object.
+204,Series,Serialization / IO / conversion,pandas.Series.to_hdf,api/pandas.Series.to_hdf.html#pandas.Series.to_hdf,Write the contained data to an HDF5 file using HDFStore.
+205,Series,Serialization / IO / conversion,pandas.Series.to_sql,api/pandas.Series.to_sql.html#pandas.Series.to_sql,Write records stored in a DataFrame to a SQL database.
+206,Series,Serialization / IO / conversion,pandas.Series.to_json,api/pandas.Series.to_json.html#pandas.Series.to_json,Convert the object to a JSON string.
+207,Series,Serialization / IO / conversion,pandas.Series.to_string,api/pandas.Series.to_string.html#pandas.Series.to_string,Render a string representation of the Series.
+208,Series,Serialization / IO / conversion,pandas.Series.to_clipboard,api/pandas.Series.to_clipboard.html#pandas.Series.to_clipboard,Copy object to the system clipboard.
+209,Series,Serialization / IO / conversion,pandas.Series.to_latex,api/pandas.Series.to_latex.html#pandas.Series.to_latex,"Render object to a LaTeX tabular, longtable, or nested table."
+210,Series,Serialization / IO / conversion,pandas.Series.to_markdown,api/pandas.Series.to_markdown.html#pandas.Series.to_markdown,Print Series in Markdown-friendly format.
