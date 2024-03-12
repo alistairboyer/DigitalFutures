@@ -8,7 +8,14 @@ import matplotlib.pyplot as plt
 
 
 # load question set
-df = pd.read_csv("PandasMethods.csv", index_col=0)
+try:
+    df = pd.read_csv("PandasMethods.csv", index_col=0)
+except FileNotFoundError:
+    try:
+        df = pd.read_csv("PandasQuiz/PandasMethods.csv", index_col=0)
+    except FileNotFoundError:
+        df = pd.read_csv("Exercises/PandasQuiz/PandasMethods.csv", index_col=0)
+
 n_choices = 7
 
 
