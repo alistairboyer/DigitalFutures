@@ -1,11 +1,8 @@
-#Introduction to Generative AI Learning Path
+# Introduction to Generative AI Learning Path
 
 _Alistair Boyer_ - <a href="https://www.cloudskillsboost.google/public_profiles/98412398-5c55-4d0f-812a-719bc7db33e8">Google Cloud Skills Public Profile</a>
 
 - Notes from <a href="https://www.cloudskillsboost.google/paths/118">Google Cloud Skills Boost Course</a>
-
-<img height="200px" alt="Generative AI Fundamentals - Skill Badge" src="images/Generative_AI_Fundamentals_Skill_Badge.png" /> <img height="200px" alt="Introduction to Generative AI - Completion Badge" src="images/Introduction_to_Generative_AI_Completion_Badge.png" /> <img height="200px" alt="Introduction to Large Language Models - Completion Badge" src="images/Introduction_To_Large_Language_Models_Completion_Badge.png" /> <img height="200px" alt="Introduction to Responsible AI - Completion Badge" src="images/Introduction_to_Responsible_AI_Completion_Badge.png" /> <img height="200px" alt="Applying AI Principles with Google Cloud - Completion Badge" src="images/Applying_AI_Principles_with_Google_Cloud_Completion_Badge.png" />
-
 
 ## Introduction to Generative AI
 
@@ -518,4 +515,4 @@ https://ai.google/static/documents/building-a-responsible-regulatory-framework-f
 
 
 
-
+<img height="200px" alt="Generative AI Fundamentals - Skill Badge" src="images/Generative_AI_Fundamentals_Skill_Badge.png" /> <img height="200px" alt="Introduction to Generative AI - Completion Badge" src="images/Introduction_to_Generative_AI_Completion_Badge.png" /> <img height="200px" alt="Introduction to Large Language Models - Completion Badge" src="images/Introduction_To_Large_Language_Models_Completion_Badge.png" /> <img height="200px" alt="Introduction to Responsible AI - Completion Badge" src="images/Introduction_to_Responsible_AI_Completion_Badge.png" /> <img height="200px" alt="Applying AI Principles with Google Cloud - Completion Badge" src="images/Applying_AI_Principles_with_Google_Cloud_Completion_Badge.png" />

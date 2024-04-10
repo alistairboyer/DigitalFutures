@@ -4,7 +4,40 @@ _Alistair Boyer_
 
 ## Pandas
 - <a href="Pandas.md">Pandas</a>
-1. Cheat-sheet for the most useful __pandas__ methods
+
+<table><tr><td style="vertical-align: top;">
+    <ol start="1">
+    <li>Creating, Reading and Converting Data</li>
+    <li>Information about the Dataset</li>
+    <li>Accessing Data by Index</li>
+    <li>Accessing Data with Tools</li>
+    <li>Index</li>
+    <li>Data Types</li>
+    <li>Joining and Adding Data</li>
+    <li>Explode</li>
+    </ol>
+</td><td style="vertical-align: top;">
+    <ol start="9">
+    <li>Nulls</li>
+    <li>Deleting and Renaming</li>
+    <li>Sorting</li>
+    <li>Analysis</li>
+    <li>Binning</li>
+    <li>Applying Functions Across Data</li>
+    <li>Pivot and Crosstab</li>
+    <li>Aggregation Methods</li>
+    </ol>
+</td><td style="vertical-align: top;">
+    <ol start="16">
+    <li>Grouping Data</li>
+    <li>Window Functions and Shifting</li>
+    <li>Category [.cat]</li>
+    <li>String [.str]</li>
+    <li>Datetime [.dt]</li>
+    <li>Formatting DataFrames</li>
+    <li>Pandas Options</li>
+    </ol>
+</td></tr></table>
 
 
 ## Ethics of AI!
@@ -32,3 +65,28 @@ _Alistair Boyer_
 
 ## Java Explorer
 - <a href="Java_Explorer.md">Java Explorer</a>
+
+<table><tr><td style="vertical-align: top;">
+    Java and Object Oriented Programming
+    <ol start="1">
+    <li>Object Oriented Programming History</li>
+    <li>Practical Considerations</li>
+    <li>OOP Features</li>
+    <li>Definitions</li>
+    <li>Java Editions</li>
+    <li>Java in Enterprise</li>
+    <li>Overview and Environment Setup for Java Explorer</li>
+    </ol>
+</td><td style="vertical-align: top;">
+    Coding in Java
+    <ol start="1">
+    <li>A Java Program</li>
+    <li>Project Design</li>
+    <li>Design Phases</li>
+    <li>Unified Modelling Language (UML)</li>
+    <li>Java Standard Classes</li>
+    <li>Variables</li>
+    <li>OOP Structure</li>
+    <li>Flow Control</li>
+    </ol>
+</td></tr></table>
