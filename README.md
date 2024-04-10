@@ -3,8 +3,9 @@ _Alistair Boyer_
 
 # Functions
 - <a href="/Functions/">Functions</a>
-- `crosstabplot()`: plot cross tabulated data with in a dataframe in a treemap-type diagram.
-- `plotstate()`: plot a US state on an object.
+  - `crosstabplot()`: plot cross tabulated data with in a dataframe in a treemap-type diagram.
+  - `plotstate()`: plot a US state on an object.
+  - `nwise()`: yield tuple of n values from a sequence [see also: `itertools.batched()`].
 
 # Course Notes
 - <a href="/Course Notes/">Course Notes</a>
@@ -16,6 +17,6 @@ _Alistair Boyer_
 
 # Exercises
 - <a href="/Exercises/">Selected exercises from the DigitalFutures course</a>
-1. Scraping books.toscrape.com
-1. Murder Mystery Challenge
-1. Escape from Mystery SQL Island
+  1. Scraping books.toscrape.com
+  1. Murder Mystery Challenge
+  1. Escape from Mystery SQL Island
