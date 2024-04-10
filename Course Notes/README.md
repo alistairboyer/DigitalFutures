@@ -4,7 +4,7 @@ _Alistair Boyer_
 
 ## Pandas
 - <a href="Pandas.md">Pandas</a>
-- Cheat-sheet for the most useful __pandas__ methods
+1. Cheat-sheet for the most useful __pandas__ methods
 
 
 ## Ethics of AI!
