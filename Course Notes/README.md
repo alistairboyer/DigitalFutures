@@ -59,9 +59,21 @@ _Alistair Boyer_
 1. Agile Operations
 1. Agile Programs
 
+- <a href="https://www.credly.com/users/alistair-boyer/badges">My Credly Profile</a>
+
+
 ## Google Learning Paths
-- <a href="https://www.cloudskillsboost.google/public_profiles/98412398-5c55-4d0f-812a-719bc7db33e8">My Public Profile</a>
 - <a href="Google_Generative_AI.md">Introduction to Generative AI and Responsible AI</a>
+
+1. Introduction to Generative AI
+1. Large Language Models (LLMs)
+1. AI Ethics and Business
+1. AI Ethics
+1. AI Ethics at Google
+1. Reading Material
+
+- <a href="https://www.cloudskillsboost.google/public_profiles/98412398-5c55-4d0f-812a-719bc7db33e8">My Google Cloud Profile</a>
+
 
 ## Java Explorer
 - <a href="Java_Explorer.md">Java Explorer</a>
