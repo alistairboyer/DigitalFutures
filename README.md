@@ -17,6 +17,6 @@ _Alistair Boyer_
 
 # Exercises
 - <a href="/Exercises/">Selected exercises from the DigitalFutures course</a>
-  1. Scraping books.toscrape.com
-  1. Murder Mystery Challenge
-  1. Escape from Mystery SQL Island
+  - Scraping books.toscrape.com
+  - Murder Mystery Challenge
+  - Escape from Mystery SQL Island
